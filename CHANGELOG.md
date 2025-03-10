@@ -1,3 +1,6 @@
+## 4.3.10
+Fixes: Cocopod using beta version of SDK
+
 ## 4.3.9
 Fixes: Remove core data warning
 
