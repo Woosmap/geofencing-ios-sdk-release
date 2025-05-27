@@ -630,6 +630,8 @@ SWIFT_CLASS("_TtC17WoosmapGeofencing22WoosmapGeofenceManager")
 /// \endcode
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) WoosmapGeofenceManager * _Nonnull shared;)
 + (WoosmapGeofenceManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+/// Check how much user move in isochrone zome
+@property (nonatomic) double distanceDisplacementFilter;
 /// Initialize of WoosmapGeofencing
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");

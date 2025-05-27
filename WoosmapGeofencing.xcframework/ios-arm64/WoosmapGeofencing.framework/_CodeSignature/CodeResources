@@ -6,35 +6,35 @@
 	<dict>
 		<key>Headers/WoosmapGeofencing-Swift.h</key>
 		<data>
-		my9J9cSUMOcA9hY2LXfIuqp6t74=
+		uWn6ydkaPpRp6wtuAN5X+ZHwzpg=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		p0Lr+7mSAj9x2NTd2iHBYMAry7Y=
+		4KquuNJXEUkiz1VDwknlKk+U3KA=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		l0w2xBfOuuJZKp0g+yV+inluVTo=
+		CHg6svYFyWhu7CaNRLbhrRzC3pg=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		2J+dV/l0Wud6E0GvMuTyHlVBnjg=
+		sxkpTlRdrxUxoaiP9lRllOimtIQ=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		SYJ4HzBrXrwZoUYC3TAQjz6th9U=
+		mFCu1pFnAh8Tp4MFJ9OIdz6IunA=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		5LUnUA9MPlUMusO/gSXmBuHOr0Y=
+		OxPb/tcHeBfKMonXPm4FtT22KtQ=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		SYJ4HzBrXrwZoUYC3TAQjz6th9U=
+		mFCu1pFnAh8Tp4MFJ9OIdz6IunA=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		tFJRmELywDko6DYLEnw6lZnxp94=
+		RytvYmRmBunyh4HrSFZqqaFnaYo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>TrackingSchema.json</key>
 		<data>
-		WkGVI6Bxw7Sf2bHJ3bM/vUoioeQ=
+		qYMxUozsTbU/mid+aezmQyDXoMQ=
 		</data>
 		<key>Woosmap.momd/VersionInfo.plist</key>
 		<data>
-		PkocPsimUSVpmessg+m6cMMxCJc=
+		MsRgB8SQUyEqXdfoLzAkKjrBPD4=
 		</data>
 		<key>Woosmap.momd/Woosmap.mom</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>liveTracking.json</key>
 		<data>
-		6vif+JWjrUBel+rInZTKL6YqXn8=
+		eEJBQ6B8sjzvfggUJRm0uoz8QP8=
 		</data>
 		<key>passiveTracking.json</key>
 		<data>
@@ -87,49 +87,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lIqPnlpZRa3TbJTMnXLmn2rZ0Sre+x/fdLdIdEASktk=
+			gaf/kcMkNmT6fNPn/oXAWvTBPjV9rVrolX3dbDNIodE=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MYA4o5G6nHi6VKLL5MT2/0eW284/9DkmSWt+pfF6nYk=
+			iCjT7zp+zKRkg7Uz7MiML1LdPHPvTsE2w/MdAEQZZbQ=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1NHkmB8UhhV2dlIwCW3LY8jELHdsWYk+x7hFsMp0LHQ=
+			k9W3G3Su+eDVUAZoySKlSMGx6d1kFRO9QEI0HxN/GmY=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			stGPz12kr8jz5nYfueEciYXTSfY3H9jbOiPUWUbVzGs=
+			eHojR7pvTpEVmJIQlEPH/8qmxyEjECzXEevQmI1T9Yk=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SCRnhmZp5GBTqEEbecSz4xjo8I1GU3lAacxM99iG8yw=
+			Ra7UM7yHsd+myLm2+k3TQoJuzw5S8DcUz0dnH0B/qec=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			stGPz12kr8jz5nYfueEciYXTSfY3H9jbOiPUWUbVzGs=
+			eHojR7pvTpEVmJIQlEPH/8qmxyEjECzXEevQmI1T9Yk=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/T64STIbGCGeamEoB89hPGqBOysj8Cz8Q89e4bj99wk=
+			yujYeowlN4Us28KpB3A0CQVtIlXq0jUHY0UqeSfalhg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -150,14 +150,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+MLcQJ5B5nG4o/KHd0qsC0MnUY0xjHYTgKfSsx9FChY=
+			aL5I0JdwFNouAMJAqcJgqBriRgwOMQVm+Ff9sBBrm0I=
 			</data>
 		</dict>
 		<key>Woosmap.momd/VersionInfo.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zxfecr1DIAXDHZNB+uVY0ggU/PFYV6CXMjVB9J0DqpE=
+			RIeUp5YpTHjRcqBwsHyXbJCRUh/kvLqRqAFW1aT7ujw=
 			</data>
 		</dict>
 		<key>Woosmap.momd/Woosmap.mom</key>
@@ -192,7 +192,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W/7DZ8eBD3hAFkJTh7NmpkfYSfATdorVFt6pKbmg0Ao=
+			H2GxKHuzx5K7GlZzPTZ39GEaRK47guH5ErJ4DiaFQDg=
 			</data>
 		</dict>
 		<key>passiveTracking.json</key>

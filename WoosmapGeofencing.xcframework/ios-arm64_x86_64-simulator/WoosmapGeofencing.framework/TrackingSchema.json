@@ -191,6 +191,11 @@
                 "distanceTimeFilter": {
                     "description": "Minimum number of seconds to wait before send a new request to the Distance provider.",
                     "type": "integer"
+                },
+                "distanceDisplacementFilter": {
+                    "description": "Minimum displacement (meter) of user to wait before send a new request to the Distance provider.",
+                    "type": "integer",
+                    "minimum": 10
                 }
             }
         },

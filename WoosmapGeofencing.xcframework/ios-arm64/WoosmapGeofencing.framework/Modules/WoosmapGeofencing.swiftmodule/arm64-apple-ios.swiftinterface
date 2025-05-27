@@ -540,6 +540,10 @@ public typealias Draft6Validator = WoosmapGeofencing.Draft7Validator
     get
     set
   }
+  @objc public var distanceDisplacementFilter: Swift.Double {
+    @objc get
+    @objc set
+  }
   @objc public func getLocationService() -> WoosmapGeofencing.LocationServiceImpl
   public func getSphericalMercator() -> WoosmapGeofencing.SphericalMercator
   public func getVisitPoint() -> WoosmapGeofencing.LoadedVisit
