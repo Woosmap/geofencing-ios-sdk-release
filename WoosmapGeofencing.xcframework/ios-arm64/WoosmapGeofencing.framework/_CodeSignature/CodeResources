@@ -10,15 +10,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4KquuNJXEUkiz1VDwknlKk+U3KA=
+		gpTTAoQ9Yev3Us8XFVpNMDSv9OY=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		CHg6svYFyWhu7CaNRLbhrRzC3pg=
+		32ARXD7KZBjKWfSapuu/N2I4ymQ=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		sxkpTlRdrxUxoaiP9lRllOimtIQ=
+		dr1xTtJO49J6zyUIqlshoZ7Oas0=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		RytvYmRmBunyh4HrSFZqqaFnaYo=
+		/w54lru4zcBRmfKY8Mv+OouX03s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Woosmap.momd/VersionInfo.plist</key>
 		<data>
-		MsRgB8SQUyEqXdfoLzAkKjrBPD4=
+		PkocPsimUSVpmessg+m6cMMxCJc=
 		</data>
 		<key>Woosmap.momd/Woosmap.mom</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>liveTracking.json</key>
 		<data>
-		eEJBQ6B8sjzvfggUJRm0uoz8QP8=
+		55wOzmD9W6QSnhbGbNANta3CaWo=
 		</data>
 		<key>passiveTracking.json</key>
 		<data>
@@ -94,14 +94,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iCjT7zp+zKRkg7Uz7MiML1LdPHPvTsE2w/MdAEQZZbQ=
+			E4n7xvBIji9IXlExBny+7aFXhpaiYo4UJaUBAGE079k=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k9W3G3Su+eDVUAZoySKlSMGx6d1kFRO9QEI0HxN/GmY=
+			XJdD+bZ7c6lsuC4hJun2Zk9SY0asQG+GeuRSYGfl1Ds=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -129,7 +129,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yujYeowlN4Us28KpB3A0CQVtIlXq0jUHY0UqeSfalhg=
+			XYiUWe2SlzqQMacMSibvDfyLrNWDKF6tWkoDNyGLBxM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -157,7 +157,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RIeUp5YpTHjRcqBwsHyXbJCRUh/kvLqRqAFW1aT7ujw=
+			zxfecr1DIAXDHZNB+uVY0ggU/PFYV6CXMjVB9J0DqpE=
 			</data>
 		</dict>
 		<key>Woosmap.momd/Woosmap.mom</key>
@@ -192,7 +192,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			H2GxKHuzx5K7GlZzPTZ39GEaRK47guH5ErJ4DiaFQDg=
+			Q9jtJEPwk1B0THStlCeLn5PBlLx123o0fHYjTvfvHao=
 			</data>
 		</dict>
 		<key>passiveTracking.json</key>
