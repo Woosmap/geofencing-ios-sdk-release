@@ -1,3 +1,6 @@
+## 4.3.12
+Fixes: Revapm ISOChrone zone to consume less number of distance request
+
 ## 4.3.11
 Fixes: Cocopod using beta version of SDK
 
