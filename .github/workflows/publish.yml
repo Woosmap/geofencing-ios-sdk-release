@@ -89,7 +89,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.client_payload.v }}
-          # body_path: $RUNNER_TEMP/artifact/WHATSNEW.md
+          body_path: ${{ runner.temp }}/artifact/WHATSNEW.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
