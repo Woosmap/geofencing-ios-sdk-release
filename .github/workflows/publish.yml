@@ -18,4 +18,6 @@ jobs:
             https://api.github.com/Woosmap/geofencing-enterprise-ios-sdk/actions/artifacts/${{ github.event.client_payload.artifact_id }}/zip
 
       - name: Unzip artifact
-        run: unzip artifact.zip
+        run: |
+        unzip artifact.zip
+        ls -l
