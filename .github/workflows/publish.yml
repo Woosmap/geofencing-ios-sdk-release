@@ -21,8 +21,7 @@ jobs:
         run: |
           unzip $RUNNER_TEMP/artifact.zip -d $RUNNER_TEMP/artifact
           unzip $RUNNER_TEMP/sdk.zip -d $RUNNER_TEMP/artifact/sdk
-          rm artifact.zip
-          rm sdk.zip
+  
           
       - name: Checkout default branch (dynamic)
         uses: actions/checkout@v4
