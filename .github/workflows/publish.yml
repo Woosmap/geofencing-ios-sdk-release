@@ -3,7 +3,7 @@ on:
   repository_dispatch:
     types: [pods]
 jobs:
-  myEvent:
+  publish:
     runs-on: ubuntu-latest
     steps:
       # - uses: actions/checkout@v3
@@ -14,10 +14,16 @@ jobs:
       - name: Download artifact zip
         run: |
           curl -L -H "Authorization: token ${{ secrets.WOOSMAP_GITHUB_TOKEN }}" \
-            -o artifact.zip \
-            https://api.github.com/Woosmap/geofencing-enterprise-ios-sdk/actions/artifacts/${{ github.event.client_payload.artifact_id }}/zip
+            -o $RUNNER_TEMP/artifact.zip \
+            https://api.github.com/repos/Woosmap/geofencing-enterprise-ios-sdk/actions/artifacts/${{ github.event.client_payload.artifact_id }}/zip
+
+          curl -L -H "Authorization: token ${{ secrets.WOOSMAP_GITHUB_TOKEN }}" \
+              -o $RUNNER_TEMP/sdk.zip \
+              https://api.github.com/repos/Woosmap/geofencing-enterprise-ios-sdk/actions/artifacts/${{ github.event.client_payload.sdk_artifact_id }}/zip
 
       - name: Unzip artifact
         run: |
-          unzip artifact.zip
+          unzip $RUNNER_TEMP/artifact.zip
+          unzip $RUNNER_TEMP/sdk.zip
+          cd $RUNNER_TEMP
           ls -l
