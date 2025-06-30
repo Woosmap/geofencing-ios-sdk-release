@@ -19,5 +19,5 @@ jobs:
 
       - name: Unzip artifact
         run: |
-        unzip artifact.zip
-        ls -l
+          unzip artifact.zip
+          ls -l
