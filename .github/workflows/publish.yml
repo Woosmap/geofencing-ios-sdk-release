@@ -113,6 +113,7 @@ jobs:
             "trunk_token": "${COCOAPODS_TRUNK_TOKEN}"
           }
           EOF
+          echo -e "---\n:trunk: $COCOAPODS_TRUNK_TOKEN\n" > ~/.netrc
 
           pod trunk me
       
@@ -127,6 +128,7 @@ jobs:
       
       - name: release podspec
         run: |
+          pod trunk me
           pod trunk push WoosmapGeofencing.podspec --allow-warnings
 
       - name: cleanup
