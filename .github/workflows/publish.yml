@@ -125,9 +125,9 @@ jobs:
         run: |
           pod lib lint WoosmapGeofencing.podspec --allow-warnings
       
-      # - name: release podspec
-      #   run: |
-      #     pod trunk push WoosmapGeofencing.podspec --allow-warnings
+      - name: release podspec
+        run: |
+          pod trunk push WoosmapGeofencing.podspec --allow-warnings
 
       - name: cleanup
         if: ${{ always() }}
