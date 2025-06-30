@@ -6,7 +6,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-            
+
       - name: Download artifact zip
         run: |
           curl -L -H "Authorization: token ${{ secrets.WOOSMAP_GITHUB_TOKEN }}" \
@@ -21,9 +21,12 @@ jobs:
         run: |
           unzip $RUNNER_TEMP/artifact.zip
           unzip $RUNNER_TEMP/sdk.zip
+          
+      - name: Check
+        run: |
           cd $RUNNER_TEMP
-          ls -l
-
+          ls -R
+          
       - name: Checkout default branch (dynamic)
         uses: actions/checkout@v4
         with:
