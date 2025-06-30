@@ -6,7 +6,16 @@ jobs:
   myEvent:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.client_payload.ref }}
-      - run: echo ${{ github.event.client_payload.sha }}
+      # - uses: actions/checkout@v3
+      #   with:
+      #     ref: ${{ github.event.client_payload.ref }}
+      - run: echo ${{ github.event.client_payload.artifact_id }}
+      
+      - name: Download artifact zip
+        run: |
+          curl -L -H "Authorization: token ${{ secrets.WOOSMAP_GITHUB_TOKEN }}" \
+            -o artifact.zip \
+            https://api.github.com/Woosmap/geofencing-enterprise-ios-sdk/actions/artifacts/${{ github.event.client_payload.artifact_id }}/zip
+
+      - name: Unzip artifact
+        run: unzip artifact.zip
