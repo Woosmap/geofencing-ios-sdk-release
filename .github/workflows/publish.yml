@@ -19,14 +19,14 @@ jobs:
 
       - name: Unzip artifact
         run: |
-          unzip $RUNNER_TEMP/artifact.zip
-          unzip $RUNNER_TEMP/sdk.zip
+          unzip $RUNNER_TEMP/artifact.zip -d $RUNNER_TEMP/artifact
+          unzip $RUNNER_TEMP/sdk.zip -d $RUNNER_TEMP/artifact
           
       - name: Check
         run: |
           cd $RUNNER_TEMP
           ls -R
-          
+
       - name: Checkout default branch (dynamic)
         uses: actions/checkout@v4
         with:
