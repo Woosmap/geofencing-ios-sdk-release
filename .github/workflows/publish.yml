@@ -2,7 +2,12 @@ name: publish Geofencing SDK on https://cocoapods.org/
 on:
   repository_dispatch:
     types: [pods]
+
+permissions:
+  contents: write
+
 jobs:
+
   publish:
     runs-on: ubuntu-latest
     steps:
@@ -69,6 +74,17 @@ jobs:
             commit_message: "Updated ${{ github.event.client_payload.v }}"
             commit_prefix: "[AUTO]"
             force: false
+      
+      - name: Create Git tag
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag ${VERSION}
+          git push origin ${VERSION}
+        env:
+          VERSION: ${{ github.event.client_payload.v }}
+
+      
 
 
 
