@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'WoosmapGeofencing'
-  s.version = '4.3.12'
+  s.version = '4.0.7'
   s.license = 'MIT'
   s.summary = 'iOS SDKs to help developers collecting users’ locations in the right way'
   s.description = 'The Woosmap Geofencing SDK is a mobile cross-platform software development kit focused on gathering efficiently the users’ location, triggering events based on region monitoring, and providing categorized users’ zone of interest from geographical and temporal clusters.

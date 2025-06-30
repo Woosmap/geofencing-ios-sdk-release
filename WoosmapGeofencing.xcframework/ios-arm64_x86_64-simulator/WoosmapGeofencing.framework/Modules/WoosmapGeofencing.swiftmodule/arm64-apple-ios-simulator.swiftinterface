@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name WoosmapGeofencing
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name WoosmapGeofencing
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import Accelerate
 import AdSupport
 import CoreData
@@ -932,6 +932,7 @@ extension WoosmapGeofencing.DistanceDB {
   }
 }
 extension WoosmapGeofencing.DistanceDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 @objc @_inheritsConvenienceInitializers public class DurationLogDB : CoreData.NSManagedObject {
@@ -954,6 +955,7 @@ extension WoosmapGeofencing.DurationLogDB {
   }
 }
 extension WoosmapGeofencing.DurationLogDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 @objc @_inheritsConvenienceInitializers public class IndoorBeaconDB : CoreData.NSManagedObject {
@@ -1000,6 +1002,7 @@ extension WoosmapGeofencing.IndoorBeaconDB {
   }
 }
 extension WoosmapGeofencing.IndoorBeaconDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 @objc @_inheritsConvenienceInitializers public class IndoorVenueDB : CoreData.NSManagedObject {
@@ -1038,6 +1041,7 @@ extension WoosmapGeofencing.IndoorVenueDB {
   }
 }
 extension WoosmapGeofencing.IndoorVenueDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 @objc @_inheritsConvenienceInitializers public class LocationDB : CoreData.NSManagedObject {
@@ -1068,6 +1072,7 @@ extension WoosmapGeofencing.LocationDB {
   }
 }
 extension WoosmapGeofencing.LocationDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 @objc @_inheritsConvenienceInitializers public class LogIndoorAPIDB : CoreData.NSManagedObject {
@@ -1094,6 +1099,7 @@ extension WoosmapGeofencing.LogIndoorAPIDB {
   }
 }
 extension WoosmapGeofencing.LogIndoorAPIDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 @objc @_inheritsConvenienceInitializers public class LogSearchAPIDB : CoreData.NSManagedObject {
@@ -1164,6 +1170,7 @@ extension WoosmapGeofencing.LogSearchAPIDB {
   }
 }
 extension WoosmapGeofencing.LogSearchAPIDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 @objc @_inheritsConvenienceInitializers public class POIDB : CoreData.NSManagedObject {
@@ -1246,6 +1253,7 @@ extension WoosmapGeofencing.POIDB {
   }
 }
 extension WoosmapGeofencing.POIDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 @objc @_inheritsConvenienceInitializers public class RegionDB : CoreData.NSManagedObject {
@@ -1316,6 +1324,7 @@ extension WoosmapGeofencing.RegionDB {
   }
 }
 extension WoosmapGeofencing.RegionDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 @objc @_inheritsConvenienceInitializers public class RegionIsochroneDB : CoreData.NSManagedObject {
@@ -1386,6 +1395,7 @@ extension WoosmapGeofencing.RegionIsochroneDB {
   }
 }
 extension WoosmapGeofencing.RegionIsochroneDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 @objc @_inheritsConvenienceInitializers public class VenueBeaconDB : CoreData.NSManagedObject {
@@ -1436,6 +1446,7 @@ extension WoosmapGeofencing.VenueBeaconDB {
   }
 }
 extension WoosmapGeofencing.VenueBeaconDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 @objc @_inheritsConvenienceInitializers public class VisitDB : CoreData.NSManagedObject {
@@ -1474,6 +1485,7 @@ extension WoosmapGeofencing.VisitDB {
   }
 }
 extension WoosmapGeofencing.VisitDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 @objc @_inheritsConvenienceInitializers public class ZOIDB : CoreData.NSManagedObject {
@@ -1556,6 +1568,7 @@ extension WoosmapGeofencing.ZOIDB {
   }
 }
 extension WoosmapGeofencing.ZOIDB : Swift.Identifiable {
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.ObjectIdentifier
 }
 extension WoosmapGeofencing.EigenDecompositionError : Swift.Equatable {}
