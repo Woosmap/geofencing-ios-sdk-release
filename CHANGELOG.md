@@ -1,4 +1,7 @@
 ## 4.3.12
+Fixes: Update CI/CD
+
+## 4.3.12
 Fixes: Revapm ISOChrone zone to consume less number of distance request
 
 ## 4.3.11
