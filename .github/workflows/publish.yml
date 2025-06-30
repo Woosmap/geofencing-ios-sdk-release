@@ -113,7 +113,8 @@ jobs:
             "trunk_token": "${COCOAPODS_TRUNK_TOKEN}"
           }
           EOF
-          echo -e "---\n:trunk: $COCOAPODS_TRUNK_TOKEN\n" > ~/.netrc
+          echo -e "machine trunk.cocoapods.org\n  login $COCOAPODS_TRUNK_TOKEN" > ~/.netrc
+          chmod 600 ~/.netrc
 
           pod trunk me
       
