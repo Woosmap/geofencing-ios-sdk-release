@@ -20,16 +20,57 @@ jobs:
       - name: Unzip artifact
         run: |
           unzip $RUNNER_TEMP/artifact.zip -d $RUNNER_TEMP/artifact
-          unzip $RUNNER_TEMP/sdk.zip -d $RUNNER_TEMP/artifact
+          unzip $RUNNER_TEMP/sdk.zip -d $RUNNER_TEMP/artifact/sdk
+          rm artifact.zip
+          rm sdk.zip
           
-      - name: Check
-        run: |
-          cd $RUNNER_TEMP
-          ls -R
-
       - name: Checkout default branch (dynamic)
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.repository.default_branch }}
+
+      - name: update latest version of SDK
+        run: |
+          cp -Rf $RUNNER_TEMP/artifact/sdk/* WoosmapGeofencing.xcframework/
+          sed -i "3 s/.*/  s.version = '${VERSION}'/" WoosmapGeofencing.podspec || exit 1
+        env:
+          VERSION: ${{ github.event.client_payload.v }}
+
+
+      - name: update Change Log
+        run: |
+          touch update.md
+          echo "## ${VERSION}" > update.md
+          cat  $RUNNER_TEMP/artifact/WHATSNEW.md >> update.md
+          echo "" >> update.md
+          cat  CHANGELOG.md >> update.md
+          rm CHANGELOG.md
+          mv update.md CHANGELOG.md
+        env:
+          VERSION: ${{ github.event.client_payload.v }}
+
+      - name: Check
+        run: |
+          cat WoosmapGeofencing.podspec
+
+      - name: Check if branch is dirty
+        id: branchstatus
+        run: |
+            _isbranchUpdated=false
+            if [[ -n $(git status --porcelain) ]]; then
+              _isbranchUpdated=true
+            fi
+            echo "update=${_isbranchUpdated}" >> "$GITHUB_OUTPUT"
+          
+      - name: Commit and push changes
+        if: ${{ steps.branchstatus.outputs.update == 'true'}}
+        uses: devops-infra/action-commit-push@master
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            commit_message: "Updated ${{ github.event.client_payload.v }}"
+            commit_prefix: "[AUTO]"
+            force: false
+
+
 
       
