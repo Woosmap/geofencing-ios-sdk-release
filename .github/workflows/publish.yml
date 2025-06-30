@@ -53,10 +53,6 @@ jobs:
         env:
           VERSION: ${{ github.event.client_payload.v }}
 
-      - name: Check
-        run: |
-          cat WoosmapGeofencing.podspec
-
       - name: Check if branch is dirty
         id: branchstatus
         run: |
@@ -84,11 +80,16 @@ jobs:
         env:
           VERSION: ${{ github.event.client_payload.v }}
 
+      
+      - name: Check
+        run: |
+          cat $RUNNER_TEMP/artifact/WHATSNEW.md
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.client_payload.v }}
-          body_path: $RUNNER_TEMP/artifact/WHATSNEW.md
+          # body_path: $RUNNER_TEMP/artifact/WHATSNEW.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
