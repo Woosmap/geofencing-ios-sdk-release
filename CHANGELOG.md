@@ -1,3 +1,6 @@
+## 4.1.2
+Fixes: New version release
+
 ## 4.3.12
 Fixes: Revapm ISOChrone zone to consume less number of distance request
 
