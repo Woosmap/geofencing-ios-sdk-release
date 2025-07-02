@@ -1,15 +1,3 @@
-## 4.0.11
-Fixes: Update CI/CD
-
-## 4.0.10
-Fixes: Update CI/CD
-
-## 4.0.9
-Fixes: Update CI/CD
-
-## 4.3.12
-Fixes: Update CI/CD
-
 ## 4.3.12
 Fixes: Revapm ISOChrone zone to consume less number of distance request
 
