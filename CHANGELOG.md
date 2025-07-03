@@ -1,3 +1,6 @@
+## 4.3.13
+Fixes: Automated SDK version via CI/CD process
+
 ## 4.3.12
 Fixes: Revapm ISOChrone zone to consume less number of distance request
 
