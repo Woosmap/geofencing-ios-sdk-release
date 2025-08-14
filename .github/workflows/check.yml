@@ -22,8 +22,8 @@ jobs:
       
       - name: installed simulator
         run: |
-          xcrun simctl list runtimes
-          
+          xcodebuild -showsdks
+
       - name: Lint podspec
         run: |
           pod lib lint WoosmapGeofencing.podspec --allow-warnings --verbose
