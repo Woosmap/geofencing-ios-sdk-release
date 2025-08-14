@@ -89,7 +89,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   cocoa-pod:
-    runs-on: macos-15
+    runs-on: macos-14
     needs: pre-publish
     steps:
       
