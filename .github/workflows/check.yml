@@ -22,7 +22,7 @@ jobs:
 
       - name: Lint podspec
         run: |
-          pod lib lint WoosmapGeofencing.podspec --allow-warnings
+          pod lib lint WoosmapGeofencing.podspec --allow-warnings --verbose
       
 
       - name: Push to CocoaPods trunk
