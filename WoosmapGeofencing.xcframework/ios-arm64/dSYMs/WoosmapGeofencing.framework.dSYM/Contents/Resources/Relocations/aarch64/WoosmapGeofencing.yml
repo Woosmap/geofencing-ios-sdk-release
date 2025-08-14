@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Volumes/livestuff/Clients/woosmap/geofenceSDK/Pre-release/4.3.14-beta3/sdk/derived_data/Build/Products/Release-iphoneos/WoosmapGeofencing.framework/WoosmapGeofencing'
+binary-path:     '/Users/runner/work/geofencing-enterprise-ios-sdk/geofencing-enterprise-ios-sdk/derived_data/Build/Products/Release-iphoneos/WoosmapGeofencing.framework/WoosmapGeofencing'
 relocations:
   - { offset: 0x6A21F, size: 0x8, addend: 0x0, symName: _WoosmapGeofencingVersionString, symObjAddr: 0x0, symBinAddr: 0xD4060, symSize: 0x0 }
   - { offset: 0x6A254, size: 0x8, addend: 0x0, symName: _WoosmapGeofencingVersionNumber, symObjAddr: 0x40, symBinAddr: 0xD40A0, symSize: 0x0 }
@@ -197,7 +197,7 @@ relocations:
   - { offset: 0x7498B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7ContextC8validate8instance6schemas11AnySequenceVyAA15ValidationErrorCGyp_yptKFAKSS_AkC_ypypSDySSypGtKctKXEfU_', symObjAddr: 0x65C, symBinAddr: 0xECE0, symSize: 0x358 }
   - { offset: 0x74E93, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7ContextCfD', symObjAddr: 0x9B4, symBinAddr: 0xF038, symSize: 0x3C }
   - { offset: 0x74F81, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7ContextC8resolver9validatorAcA11RefResolverC_AA9Validator_ptcfCTf4nen_nTf4gnn_n', symObjAddr: 0x128C, symBinAddr: 0xF838, symSize: 0x12C }
-  - { offset: 0x7522A, size: 0x8, addend: 0x0, symName: '_$sSo18NSNotificationNamea17WoosmapGeofencingE20woosmapGeofenceErrorABvpZ', symObjAddr: 0x7D20, symBinAddr: 0x114D78, symSize: 0x0 }
+  - { offset: 0x7522A, size: 0x8, addend: 0x0, symName: '_$sSo18NSNotificationNamea17WoosmapGeofencingE20woosmapGeofenceErrorABvpZ', symObjAddr: 0x7DC0, symBinAddr: 0x114D78, symSize: 0x0 }
   - { offset: 0x75238, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing23LocationServiceDelegateP15sdkErrorOccured3errys0G0_p_tF', symObjAddr: 0x0, symBinAddr: 0xF97C, symSize: 0x4 }
   - { offset: 0x75254, size: 0x8, addend: 0x0, symName: '_$sSo18NSNotificationNamea17WoosmapGeofencingE20woosmapGeofenceError_WZ', symObjAddr: 0x8, symBinAddr: 0xF980, symSize: 0x34 }
   - { offset: 0x7536C, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing23LocationManagerProtocolCMa', symObjAddr: 0x94, symBinAddr: 0xF9B4, symSize: 0x20 }
@@ -216,7 +216,7 @@ relocations:
   - { offset: 0x75D73, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing23LocationManagerProtocolCACycfc', symObjAddr: 0x1AC, symBinAddr: 0xFA90, symSize: 0x3C }
   - { offset: 0x75DA6, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing23LocationManagerProtocolCACycfcTo', symObjAddr: 0x1E8, symBinAddr: 0xFACC, symSize: 0x48 }
   - { offset: 0x75DDB, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing23LocationManagerProtocolCfD', symObjAddr: 0x230, symBinAddr: 0xFB14, symSize: 0x30 }
-  - { offset: 0x75FEC, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_04_META_SCHEMASDySSypGvp', symObjAddr: 0x6E18, symBinAddr: 0x114D80, symSize: 0x0 }
+  - { offset: 0x75FEC, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_04_META_SCHEMASDySSypGvp', symObjAddr: 0x6EB8, symBinAddr: 0x114D80, symSize: 0x0 }
   - { offset: 0x76224, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_04_META_SCHEMA_WZ', symObjAddr: 0x5AC, symBinAddr: 0x10B30, symSize: 0x1C }
   - { offset: 0x7623E, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_04_META_SCHEMASDySSypGvpfiACyXEfU_', symObjAddr: 0x5C8, symBinAddr: 0x10B4C, symSize: 0x1F8 }
   - { offset: 0x762B5, size: 0x8, addend: 0x0, symName: '_$sSS_yptWOh', symObjAddr: 0x7C0, symBinAddr: 0x10D44, symSize: 0x40 }
@@ -841,7 +841,7 @@ relocations:
   - { offset: 0xA056E, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing12LogSearchAPICfd', symObjAddr: 0x0, symBinAddr: 0x44968, symSize: 0xB8 }
   - { offset: 0xA0597, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing12LogSearchAPICfD', symObjAddr: 0xFC, symBinAddr: 0x44A20, symSize: 0x24 }
   - { offset: 0xA081D, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing13LogSearchAPIsC3add3logyAA0cD3APIC_tFZ', symObjAddr: 0x120, symBinAddr: 0x44A44, symSize: 0x860 }
-  - { offset: 0xA0EF8, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_07_META_SCHEMASDySSypGvp', symObjAddr: 0x7368, symBinAddr: 0x114E10, symSize: 0x0 }
+  - { offset: 0xA0EF8, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_07_META_SCHEMASDySSypGvp', symObjAddr: 0x7400, symBinAddr: 0x114E10, symSize: 0x0 }
   - { offset: 0xA110F, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_07_META_SCHEMA_WZ', symObjAddr: 0x69C, symBinAddr: 0x4596C, symSize: 0x1C }
   - { offset: 0xA1129, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_07_META_SCHEMASDySSypGvpfiACyXEfU_', symObjAddr: 0x6B8, symBinAddr: 0x45988, symSize: 0x1F8 }
   - { offset: 0xA11A0, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing15Draft7ValidatorCMa', symObjAddr: 0x8F0, symBinAddr: 0x45B80, symSize: 0x20 }
@@ -851,13 +851,13 @@ relocations:
   - { offset: 0xA15F3, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing15Draft7ValidatorC6schemaACSDySSypG_tcfc', symObjAddr: 0x3A0, symBinAddr: 0x45720, symSize: 0x24C }
   - { offset: 0xA198D, size: 0x8, addend: 0x0, symName: '_$s2os6LoggerV17WoosmapGeofencingE9subsystem33_B08A5E75FA6E100931A65D3B85744A8CLL_WZ', symObjAddr: 0x0, symBinAddr: 0x45BAC, symSize: 0x90 }
   - { offset: 0xA19B1, size: 0x8, addend: 0x0, symName: '_$s2os6LoggerV17WoosmapGeofencingE9subsystem33_B08A5E75FA6E100931A65D3B85744A8CLLSSvpZ', symObjAddr: 0x1C8, symBinAddr: 0x1111A8, symSize: 0x0 }
-  - { offset: 0xA19CB, size: 0x8, addend: 0x0, symName: '_$s2os6LoggerV17WoosmapGeofencingE6sdklogACvpZ', symObjAddr: 0x2C80, symBinAddr: 0x114E18, symSize: 0x0 }
+  - { offset: 0xA19CB, size: 0x8, addend: 0x0, symName: '_$s2os6LoggerV17WoosmapGeofencingE6sdklogACvpZ', symObjAddr: 0x2D18, symBinAddr: 0x114E18, symSize: 0x0 }
   - { offset: 0xA19D9, size: 0x8, addend: 0x0, symName: '_$s2os6LoggerV17WoosmapGeofencingE9subsystem33_B08A5E75FA6E100931A65D3B85744A8CLL_WZ', symObjAddr: 0x0, symBinAddr: 0x45BAC, symSize: 0x90 }
   - { offset: 0xA1A1A, size: 0x8, addend: 0x0, symName: '_$s2os6LoggerV17WoosmapGeofencingE6sdklog_WZ', symObjAddr: 0x90, symBinAddr: 0x45C3C, symSize: 0xB0 }
   - { offset: 0xA1A4F, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7WoosLogCMa', symObjAddr: 0x150, symBinAddr: 0x45CEC, symSize: 0x20 }
   - { offset: 0xA1A63, size: 0x8, addend: 0x0, symName: ___swift_allocate_value_buffer, symObjAddr: 0x170, symBinAddr: 0x45D0C, symSize: 0x40 }
-  - { offset: 0xA1C49, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing9list_zoisSaySDySSypGGvp', symObjAddr: 0x45100, symBinAddr: 0x114E30, symSize: 0x0 }
-  - { offset: 0xA1C63, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing28chi_squared_value_for_updateSdvp', symObjAddr: 0x45108, symBinAddr: 0x114E38, symSize: 0x0 }
+  - { offset: 0xA1C49, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing9list_zoisSaySDySSypGGvp', symObjAddr: 0x451A0, symBinAddr: 0x114E30, symSize: 0x0 }
+  - { offset: 0xA1C63, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing28chi_squared_value_for_updateSdvp', symObjAddr: 0x451A8, symBinAddr: 0x114E38, symSize: 0x0 }
   - { offset: 0xA1C71, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing9list_zois_WZ', symObjAddr: 0x0, symBinAddr: 0x45D4C, symSize: 0x14 }
   - { offset: 0xA1C8B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing28chi_squared_value_for_update_WZ', symObjAddr: 0x14, symBinAddr: 0x45D60, symSize: 0x1C }
   - { offset: 0xA2510, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing12incrementZOI5pointSbAA11LoadedVisitC_tF', symObjAddr: 0x30, symBinAddr: 0x45D7C, symSize: 0xBE4 }
@@ -905,14 +905,14 @@ relocations:
   - { offset: 0xAED26, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing17SphericalMercatorC5lon2x5aLongS2d_tF', symObjAddr: 0x7C94, symBinAddr: 0x4D8F8, symSize: 0x2C }
   - { offset: 0xAEDA6, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing17SphericalMercatorCfD', symObjAddr: 0x7CC8, symBinAddr: 0x4D924, symSize: 0x10 }
   - { offset: 0xAEDE8, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing6MatrixVyACyxGqd__c7ElementQyd_0_RszSlRd__SlRd_0_AEQyd__Rsd_0_r0_lufCSd_s13AnyCollectionVySaySdGGAJTt0g5', symObjAddr: 0x7F90, symBinAddr: 0x4DB74, symSize: 0x2A0 }
-  - { offset: 0xAF3FA, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing25DRAFT_2020_12_META_SCHEMASDySSypGvp', symObjAddr: 0xE9B8, symBinAddr: 0x114E50, symSize: 0x0 }
-  - { offset: 0xAF414, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing30DRAFT_2020_12_META_SCHEMA_CORESDySSypGvp', symObjAddr: 0xE9C0, symBinAddr: 0x114E58, symSize: 0x0 }
-  - { offset: 0xAF42E, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing36DRAFT_2020_12_META_SCHEMA_APPLICATORSDySSypGvp', symObjAddr: 0xE9C8, symBinAddr: 0x114E60, symSize: 0x0 }
-  - { offset: 0xAF449, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing37DRAFT_2020_12_META_SCHEMA_UNEVALUATEDSDySSypGvp', symObjAddr: 0xE9D0, symBinAddr: 0x114E68, symSize: 0x0 }
-  - { offset: 0xAF464, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing36DRAFT_2020_12_META_SCHEMA_VALIDATIONSDySSypGvp', symObjAddr: 0xE9D8, symBinAddr: 0x114E70, symSize: 0x0 }
-  - { offset: 0xAF47F, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing34DRAFT_2020_12_META_SCHEMA_METADATASDySSypGvp', symObjAddr: 0xE9E0, symBinAddr: 0x114E78, symSize: 0x0 }
-  - { offset: 0xAF49A, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing43DRAFT_2020_12_META_SCHEMA_FORMAT_ANNOTATIONSDySSypGvp', symObjAddr: 0xE9E8, symBinAddr: 0x114E80, symSize: 0x0 }
-  - { offset: 0xAF4B5, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing33DRAFT_2020_12_META_SCHEMA_CONTENTSDySSypGvp', symObjAddr: 0xE9F0, symBinAddr: 0x114E88, symSize: 0x0 }
+  - { offset: 0xAF3FA, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing25DRAFT_2020_12_META_SCHEMASDySSypGvp', symObjAddr: 0xEA50, symBinAddr: 0x114E50, symSize: 0x0 }
+  - { offset: 0xAF414, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing30DRAFT_2020_12_META_SCHEMA_CORESDySSypGvp', symObjAddr: 0xEA58, symBinAddr: 0x114E58, symSize: 0x0 }
+  - { offset: 0xAF42E, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing36DRAFT_2020_12_META_SCHEMA_APPLICATORSDySSypGvp', symObjAddr: 0xEA60, symBinAddr: 0x114E60, symSize: 0x0 }
+  - { offset: 0xAF449, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing37DRAFT_2020_12_META_SCHEMA_UNEVALUATEDSDySSypGvp', symObjAddr: 0xEA68, symBinAddr: 0x114E68, symSize: 0x0 }
+  - { offset: 0xAF464, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing36DRAFT_2020_12_META_SCHEMA_VALIDATIONSDySSypGvp', symObjAddr: 0xEA70, symBinAddr: 0x114E70, symSize: 0x0 }
+  - { offset: 0xAF47F, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing34DRAFT_2020_12_META_SCHEMA_METADATASDySSypGvp', symObjAddr: 0xEA78, symBinAddr: 0x114E78, symSize: 0x0 }
+  - { offset: 0xAF49A, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing43DRAFT_2020_12_META_SCHEMA_FORMAT_ANNOTATIONSDySSypGvp', symObjAddr: 0xEA80, symBinAddr: 0x114E80, symSize: 0x0 }
+  - { offset: 0xAF4B5, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing33DRAFT_2020_12_META_SCHEMA_CONTENTSDySSypGvp', symObjAddr: 0xEA88, symBinAddr: 0x114E88, symSize: 0x0 }
   - { offset: 0xAF4C3, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7ContextCypypSDySSypGs11AnySequenceVyAA15ValidationErrorCGs0G0_pIeggnngozo_ACypypAdIsAJ_pIegnnnnrzo_TR04$s17a58Geofencing17dependentRequired7contextAB8instance6schemas11de6VyAA15fg5CGAA7C17C_ypypSDySSypGtKFTf3nnnnnpf_n', symObjAddr: 0x0, symBinAddr: 0x4E1C0, symSize: 0x30 }
   - { offset: 0xAF4F8, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7ContextCypypSDySSypGs11AnySequenceVyAA15ValidationErrorCGs0G0_pIeggnngozo_ACypypAdIsAJ_pIegnnnnrzo_TR04$s17a66Geofencing16dependentSchemas7context0C8Required8instance6schemas11de6VyAA15fg5CGAA7C17C_ypypSDySSypGtKFTf3nnnnnpf_n', symObjAddr: 0x30, symBinAddr: 0x4E1F0, symSize: 0x2C }
   - { offset: 0xAF52B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7ContextCypypSDySSypGs11AnySequenceVyAA15ValidationErrorCGs0G0_pIeggnngozo_ACypypAdIsAJ_pIegnnnnrzo_TR', symObjAddr: 0x5C, symBinAddr: 0x4E21C, symSize: 0x34 }
@@ -1582,13 +1582,13 @@ relocations:
   - { offset: 0xD779A, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7RegionsC15getRegionFromId2idAA0E0CSgSS_tFZTf4nd_n', symObjAddr: 0x4750, symBinAddr: 0x80CF0, symSize: 0x5F0 }
   - { offset: 0xD7DB8, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7RegionsC3add16classifiedRegionyAA0F0C_tFZTf4nd_n', symObjAddr: 0x4D40, symBinAddr: 0x812E0, symSize: 0x5C8 }
   - { offset: 0xD81C4, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing11DurationLogC08durationD2DBAcA0cdF0C_tc33_31D955338B646544E5BDE09A852FBFEALlfCTf4nd_n', symObjAddr: 0x53F4, symBinAddr: 0x818A8, symSize: 0x350 }
-  - { offset: 0xD83D6, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing25DRAFT_2019_09_META_SCHEMASDySSypGvp', symObjAddr: 0xD418, symBinAddr: 0x115010, symSize: 0x0 }
-  - { offset: 0xD83F0, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing30DRAFT_2019_09_META_SCHEMA_CORESDySSypGvp', symObjAddr: 0xD420, symBinAddr: 0x115018, symSize: 0x0 }
-  - { offset: 0xD840A, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing36DRAFT_2019_09_META_SCHEMA_APPLICATORSDySSypGvp', symObjAddr: 0xD428, symBinAddr: 0x115020, symSize: 0x0 }
-  - { offset: 0xD8425, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing36DRAFT_2019_09_META_SCHEMA_VALIDATIONSDySSypGvp', symObjAddr: 0xD430, symBinAddr: 0x115028, symSize: 0x0 }
-  - { offset: 0xD8440, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing34DRAFT_2019_09_META_SCHEMA_METADATASDySSypGvp', symObjAddr: 0xD438, symBinAddr: 0x115030, symSize: 0x0 }
-  - { offset: 0xD845B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing32DRAFT_2019_09_META_SCHEMA_FORMATSDySSypGvp', symObjAddr: 0xD440, symBinAddr: 0x115038, symSize: 0x0 }
-  - { offset: 0xD8476, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing33DRAFT_2019_09_META_SCHEMA_CONTENTSDySSypGvp', symObjAddr: 0xD448, symBinAddr: 0x115040, symSize: 0x0 }
+  - { offset: 0xD83D6, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing25DRAFT_2019_09_META_SCHEMASDySSypGvp', symObjAddr: 0xD4A8, symBinAddr: 0x115010, symSize: 0x0 }
+  - { offset: 0xD83F0, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing30DRAFT_2019_09_META_SCHEMA_CORESDySSypGvp', symObjAddr: 0xD4B0, symBinAddr: 0x115018, symSize: 0x0 }
+  - { offset: 0xD840A, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing36DRAFT_2019_09_META_SCHEMA_APPLICATORSDySSypGvp', symObjAddr: 0xD4B8, symBinAddr: 0x115020, symSize: 0x0 }
+  - { offset: 0xD8425, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing36DRAFT_2019_09_META_SCHEMA_VALIDATIONSDySSypGvp', symObjAddr: 0xD4C0, symBinAddr: 0x115028, symSize: 0x0 }
+  - { offset: 0xD8440, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing34DRAFT_2019_09_META_SCHEMA_METADATASDySSypGvp', symObjAddr: 0xD4C8, symBinAddr: 0x115030, symSize: 0x0 }
+  - { offset: 0xD845B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing32DRAFT_2019_09_META_SCHEMA_FORMATSDySSypGvp', symObjAddr: 0xD4D0, symBinAddr: 0x115038, symSize: 0x0 }
+  - { offset: 0xD8476, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing33DRAFT_2019_09_META_SCHEMA_CONTENTSDySSypGvp', symObjAddr: 0xD4D8, symBinAddr: 0x115040, symSize: 0x0 }
   - { offset: 0xD871A, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing25DRAFT_2019_09_META_SCHEMA_WZ', symObjAddr: 0x15E8, symBinAddr: 0x83A3C, symSize: 0x1C }
   - { offset: 0xD8734, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing25DRAFT_2019_09_META_SCHEMASDySSypGvpfiACyXEfU_', symObjAddr: 0x1604, symBinAddr: 0x83A58, symSize: 0x1F8 }
   - { offset: 0xD87AB, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing30DRAFT_2019_09_META_SCHEMA_CORE_WZ', symObjAddr: 0x17FC, symBinAddr: 0x83C50, symSize: 0x1C }
@@ -1648,7 +1648,7 @@ relocations:
   - { offset: 0xDAF89, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing15indoorSearchAPISSvp', symObjAddr: 0xC48, symBinAddr: 0x112BF8, symSize: 0x0 }
   - { offset: 0xDAFA3, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing29indoorVenueAPIRefreshDelayDaySivp', symObjAddr: 0xC58, symBinAddr: 0x112C08, symSize: 0x0 }
   - { offset: 0xDAFBD, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing21indoorSearchAPIEnableSbvp', symObjAddr: 0xC60, symBinAddr: 0x112C10, symSize: 0x0 }
-  - { offset: 0xDAFD7, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing19protectedRegionSlotSivp', symObjAddr: 0x5C20, symBinAddr: 0x115048, symSize: 0x0 }
+  - { offset: 0xDAFD7, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing19protectedRegionSlotSivp', symObjAddr: 0x5CB8, symBinAddr: 0x115048, symSize: 0x0 }
   - { offset: 0xDAFF1, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing27_distanceDisplacementFilterSdvp', symObjAddr: 0xC68, symBinAddr: 0x112C18, symSize: 0x0 }
   - { offset: 0xDB071, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing15SFMCCredentials_WZ', symObjAddr: 0x4B8, symBinAddr: 0x864B0, symSize: 0x24 }
   - { offset: 0xDB0C3, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing15SFMCCredentialsSDyS2SGvg', symObjAddr: 0x4DC, symBinAddr: 0x864D4, symSize: 0x6C }
@@ -1710,7 +1710,7 @@ relocations:
   - { offset: 0xDD3BD, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7JSONAnyCSEAASE6encode2toys7Encoder_p_tKFTW', symObjAddr: 0x2724, symBinAddr: 0x8918C, symSize: 0x20 }
   - { offset: 0xDD3D1, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7JSONAnyC6encode2to5valueys28SingleValueEncodingContainer_pz_yptKFZTf4nnd_n', symObjAddr: 0x299C, symBinAddr: 0x892DC, symSize: 0x2F4 }
   - { offset: 0xDD62B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing0A11DataManagerC7connect_WZ', symObjAddr: 0x0, symBinAddr: 0x895D0, symSize: 0x2C }
-  - { offset: 0xDD64F, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing0A11DataManagerC7connectACvpZ', symObjAddr: 0xB798, symBinAddr: 0x115050, symSize: 0x0 }
+  - { offset: 0xDD64F, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing0A11DataManagerC7connectACvpZ', symObjAddr: 0xB838, symBinAddr: 0x115050, symSize: 0x0 }
   - { offset: 0xDD741, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing0A11DataManagerC7connect_WZ', symObjAddr: 0x0, symBinAddr: 0x895D0, symSize: 0x2C }
   - { offset: 0xDD947, size: 0x8, addend: 0x0, symName: '_$sSo28NSPersistentStoreDescriptionCs5Error_pSgIeggg_ABSo7NSErrorCSgIeyByy_TR', symObjAddr: 0xEA0, symBinAddr: 0x8A470, symSize: 0x78 }
   - { offset: 0xDD9A1, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing0A11DataManagerCfETo', symObjAddr: 0x1234, symBinAddr: 0x8A6D8, symSize: 0x64 }
@@ -1740,10 +1740,10 @@ relocations:
   - { offset: 0xDEC0E, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing0A11DataManagerCACycfcTo', symObjAddr: 0x10B8, symBinAddr: 0x8A688, symSize: 0x20 }
   - { offset: 0xDEC22, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing0A11DataManagerCfD', symObjAddr: 0x1204, symBinAddr: 0x8A6A8, symSize: 0x30 }
   - { offset: 0xDEDA1, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20list_zois_qualifiers_WZ', symObjAddr: 0x0, symBinAddr: 0x8AA28, symSize: 0x14 }
-  - { offset: 0xDEDC5, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20list_zois_qualifiersSaySDySSypGGvp', symObjAddr: 0x25548, symBinAddr: 0x115058, symSize: 0x0 }
-  - { offset: 0xDEDDF, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7PERIODSSaySDySSypGGvp', symObjAddr: 0x25550, symBinAddr: 0x115060, symSize: 0x0 }
-  - { offset: 0xDEDF9, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing11HOME_PERIODSaySDySSypGGvp', symObjAddr: 0x25558, symBinAddr: 0x115068, symSize: 0x0 }
-  - { offset: 0xDEE13, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing11WORK_PERIODSaySDySSypGGvp', symObjAddr: 0x25560, symBinAddr: 0x115070, symSize: 0x0 }
+  - { offset: 0xDEDC5, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20list_zois_qualifiersSaySDySSypGGvp', symObjAddr: 0x255D8, symBinAddr: 0x115058, symSize: 0x0 }
+  - { offset: 0xDEDDF, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7PERIODSSaySDySSypGGvp', symObjAddr: 0x255E0, symBinAddr: 0x115060, symSize: 0x0 }
+  - { offset: 0xDEDF9, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing11HOME_PERIODSaySDySSypGGvp', symObjAddr: 0x255E8, symBinAddr: 0x115068, symSize: 0x0 }
+  - { offset: 0xDEE13, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing11WORK_PERIODSaySDySSypGGvp', symObjAddr: 0x255F0, symBinAddr: 0x115070, symSize: 0x0 }
   - { offset: 0xDEE21, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20list_zois_qualifiers_WZ', symObjAddr: 0x0, symBinAddr: 0x8AA28, symSize: 0x14 }
   - { offset: 0xDEE3B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7PERIODS_WZ', symObjAddr: 0x14, symBinAddr: 0x8AA3C, symSize: 0x14 }
   - { offset: 0xDEE55, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing11HOME_PERIOD_WZ', symObjAddr: 0x28, symBinAddr: 0x8AA50, symSize: 0x14 }
@@ -1815,7 +1815,7 @@ relocations:
   - { offset: 0xE7B0D, size: 0x8, addend: 0x0, symName: '_$ss10ArraySliceVyxG17WoosmapGeofencing22UnsafeMemoryAccessibleADWI', symObjAddr: 0x298, symBinAddr: 0x91EE8, symSize: 0x2C }
   - { offset: 0xE7B21, size: 0x8, addend: 0x0, symName: '_$ss10ArraySliceVyxG17WoosmapGeofencing29UnsafeMutableMemoryAccessibleADWI', symObjAddr: 0x2C4, symBinAddr: 0x91F14, symSize: 0x2C }
   - { offset: 0xE7CF7, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_06_META_SCHEMA_WZ', symObjAddr: 0x0, symBinAddr: 0x91F40, symSize: 0x1C }
-  - { offset: 0xE7D1B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_06_META_SCHEMASDySSypGvp', symObjAddr: 0x3B48, symBinAddr: 0x115098, symSize: 0x0 }
+  - { offset: 0xE7D1B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_06_META_SCHEMASDySSypGvp', symObjAddr: 0x3BE8, symBinAddr: 0x115098, symSize: 0x0 }
   - { offset: 0xE7D29, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_06_META_SCHEMA_WZ', symObjAddr: 0x0, symBinAddr: 0x91F40, symSize: 0x1C }
   - { offset: 0xE7D43, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing20DRAFT_06_META_SCHEMASDySSypGvpfiACyXEfU_', symObjAddr: 0x1C, symBinAddr: 0x91F5C, symSize: 0x1F8 }
   - { offset: 0xE8036, size: 0x8, addend: 0x0, symName: '_$sSlsE3mapySayqd__Gqd__7ElementQzqd_0_YKXEqd_0_YKs5ErrorRd_0_r0_lFSDySSypG_s11AnySequenceVy17WoosmapGeofencing010ValidationC0CGsAE_pTg509$sSSyps11de4Vy17f12Geofencing15hC49CGs0F0_pIggnozo_SS3key_yp5valuetAFsAG_pIegnrzr_TRSSypALsAE_pIggnozo_Tf1cn_nTf4ng_n', symObjAddr: 0x3E8, symBinAddr: 0x9253C, symSize: 0x2E8 }
@@ -1856,7 +1856,7 @@ relocations:
   - { offset: 0xEDC1B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing8maxItems7contextAB8instance6schemas11AnySequenceVyAA15ValidationErrorCGAA7ContextC_ypypSDySSypGtFTf4nnnd_n', symObjAddr: 0x220, symBinAddr: 0x97AE8, symSize: 0x220 }
   - { offset: 0xEE05B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7pattern7contextAB8instance6schemas11AnySequenceVyAA15ValidationErrorCGAA7ContextC_ypypSDySSypGtFTf4nnnd_n', symObjAddr: 0x0, symBinAddr: 0x97D08, symSize: 0x460 }
   - { offset: 0xEE202, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing7pattern7contextAB8instance6schemas11AnySequenceVyAA15ValidationErrorCGAA7ContextC_ypypSDySSypGtFTf4nnnd_n', symObjAddr: 0x0, symBinAddr: 0x97D08, symSize: 0x460 }
-  - { offset: 0xEE89B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing15TRACKING_SCHEMASDySSypGvp', symObjAddr: 0x3FF28, symBinAddr: 0x1150A0, symSize: 0x0 }
+  - { offset: 0xEE89B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing15TRACKING_SCHEMASDySSypGvp', symObjAddr: 0x3FFD8, symBinAddr: 0x1150A0, symSize: 0x0 }
   - { offset: 0xEE8B5, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing0A15GeofenceManagerC6sharedACvpZ', symObjAddr: 0x100A0, symBinAddr: 0x113460, symSize: 0x0 }
   - { offset: 0xEF44B, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing15TRACKING_SCHEMA_WZ', symObjAddr: 0x164, symBinAddr: 0x982CC, symSize: 0x1C }
   - { offset: 0xEF465, size: 0x8, addend: 0x0, symName: '_$s17WoosmapGeofencing15TRACKING_SCHEMASDySSypGvpfiACyXEfU_', symObjAddr: 0x180, symBinAddr: 0x982E8, symSize: 0x3B4 }

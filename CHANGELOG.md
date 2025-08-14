@@ -1,3 +1,6 @@
+## 4.3.14
+Fixes: Added dSYM symbol with framework
+
 ## 4.3.13
 Fixes: Automated SDK version via CI/CD process
 
