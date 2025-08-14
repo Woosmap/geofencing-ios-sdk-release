@@ -8,7 +8,7 @@ on:
 
 jobs:
   cocoa-pod:
-    runs-on: macos-15
+    runs-on: macos-latest
     steps:
       
       - name: Set up Ruby and CocoaPods
