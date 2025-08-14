@@ -1,0 +1,51 @@
+name: Cocoapod checker
+
+on:
+  pull_request:
+    branches:
+      - 'sdk4.0'
+    types: [synchronize, labeled, opened]
+
+jobs:
+  cocoa-pod:
+    runs-on: macos-15
+    steps:
+      
+      - name: Set up Ruby and CocoaPods
+        run: |
+          sudo gem install cocoapods
+      
+      - name: Checkout default branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Lint podspec
+        run: |
+          pod lib lint WoosmapGeofencing.podspec --allow-warnings
+      
+
+      - name: Push to CocoaPods trunk
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+        run: |
+          mkdir -p ~/.cocoapods
+          mkdir -p ~/.cocoapods/trunk
+          cat <<EOF > ~/.cocoapods/trunk/config.json
+          {
+            "trunk_token": "${COCOAPODS_TRUNK_TOKEN}"
+          }
+          EOF
+          pod trunk me
+          pod trunk push WoosmapGeofencing.podspec --allow-warnings
+      
+
+      - name: cleanup
+        if: ${{ always() }}
+        run: |
+            rm -rf ~/.cocoapods
+      
+
+
+
+      
