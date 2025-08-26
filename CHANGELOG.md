@@ -1,3 +1,6 @@
+## 4.3.15
+- Updated:  Calculate OpenNow status with OpenNow Specification
+
 ## 4.3.14
 Fixes: Added dSYM symbol with framework
 

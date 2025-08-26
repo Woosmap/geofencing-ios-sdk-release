@@ -1390,12 +1390,9 @@
             "mangledName": "$s17WoosmapGeofencing3POIC7openNowSbvp",
             "moduleName": "WoosmapGeofencing",
             "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
               "AccessControl",
               "RawDocComment"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -1413,7 +1410,6 @@
                 "usr": "s:17WoosmapGeofencing3POIC7openNowSbvg",
                 "mangledName": "$s17WoosmapGeofencing3POIC7openNowSbvg",
                 "moduleName": "WoosmapGeofencing",
-                "implicit": true,
                 "accessorKind": "get"
               },
               {
@@ -1437,7 +1433,6 @@
                 "usr": "s:17WoosmapGeofencing3POIC7openNowSbvs",
                 "mangledName": "$s17WoosmapGeofencing3POIC7openNowSbvs",
                 "moduleName": "WoosmapGeofencing",
-                "implicit": true,
                 "accessorKind": "set"
               },
               {
@@ -14799,6 +14794,16 @@
         "kind": "Import",
         "name": "Accelerate",
         "printedName": "Accelerate",
+        "declKind": "Import",
+        "moduleName": "WoosmapGeofencing",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "WoosmapGeofencing",
         "declAttributes": [
@@ -53628,7 +53633,7 @@
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/core\/Sources\/WoosmapGeofencing\/Business Logic\/POI.swift",
       "kind": "BooleanLiteral",
-      "offset": 849,
+      "offset": 834,
       "length": 5,
       "value": "false"
     },
@@ -56683,6 +56688,20 @@
       "offset": 4983,
       "length": 12,
       "value": "\"ASCII_name\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/core\/Sources\/WoosmapGeofencing\/Business Logic\/OpeningHoursChecker.swift",
+      "kind": "StringLiteral",
+      "offset": 465,
+      "length": 19,
+      "value": "\"temporary_closure\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/core\/Sources\/WoosmapGeofencing\/Business Logic\/OpeningHoursChecker.swift",
+      "kind": "StringLiteral",
+      "offset": 1378,
+      "length": 9,
+      "value": "\"all-day\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/core\/Sources\/WoosmapGeofencing\/Business Logic\/Region.swift",

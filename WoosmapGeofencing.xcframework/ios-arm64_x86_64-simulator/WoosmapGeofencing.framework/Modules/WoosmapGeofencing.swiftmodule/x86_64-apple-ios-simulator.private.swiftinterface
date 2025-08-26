@@ -30,7 +30,10 @@ import os
   public var zipCode: Swift.String?
   public var radius: Swift.Double
   public var address: Swift.String?
-  public var openNow: Swift.Bool
+  public var openNow: Swift.Bool {
+    get
+    set
+  }
   public var countryCode: Swift.String?
   public var tags: Swift.String?
   public var types: Swift.String?
