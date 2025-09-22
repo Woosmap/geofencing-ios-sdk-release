@@ -6,35 +6,35 @@
 	<dict>
 		<key>Headers/WoosmapGeofencing-Swift.h</key>
 		<data>
-		2GgqpZ+QzlvYCRJeihI11B8dSIk=
+		cAR0cEsfZUCG7PnBOjRs9tEGJiA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		V7GsnDLjhMWaJvTnXdc5kRl4CcU=
+		c+5kz1yGkhO+YaY52b3rE3tJ+DI=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		CHXV46xcV0kNOQyZA3U6mXX1orI=
+		0at/9Gcj+v0Nhh2xpGLf8vOUo4I=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		oiASBjVm8yPj5gzACGx39hO06Bs=
+		RvbkG/1Gg0Fc/DboUy5I0sS/8GQ=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		JqSLhEUtR2jDJKYfzSBYTXXb/Po=
+		S1pUkN65KaJTWL5nlX3GG6+tzqk=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		2ViPZqkBnkAb+ZfiNQsnW7JvPcI=
+		dqaHsGUG1eik7LSpy/+SCXMZoi8=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		JqSLhEUtR2jDJKYfzSBYTXXb/Po=
+		S1pUkN65KaJTWL5nlX3GG6+tzqk=
 		</data>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		wDr1wYNao6yCiZzseSuvmDuKuCM=
+		Kjbc+i5uK5j39fQVeHyp8FMPhhU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,15 +50,15 @@
 		</data>
 		<key>Woosmap.momd/VersionInfo.plist</key>
 		<data>
-		PkocPsimUSVpmessg+m6cMMxCJc=
+		MsRgB8SQUyEqXdfoLzAkKjrBPD4=
 		</data>
 		<key>Woosmap.momd/Woosmap.mom</key>
 		<data>
-		W+GDuEi19vAiNSx5PyOd0MDFYLg=
+		KIck+oLmPwfL0H8NM9GZ1byd1uM=
 		</data>
 		<key>Woosmap.momd/dec1924.mom</key>
 		<data>
-		9pxAo6NMDreo8Hwj9K8QzpcumsI=
+		FXu7mKvJ8Hsw7E5XIPO5PSex860=
 		</data>
 		<key>Woosmap.momd/dec1924.omo</key>
 		<data>
@@ -87,49 +87,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LdFNZsO4gUqCbgDCbCdPjGA5mJfCipVfiPmGvF3B8Iw=
+			faL8H8I2MvNOoTp/ssJIyqt/ntTkKdeKxGd6c1lkUt8=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			W3HrcJL1fZgfEJt+2QE8CRjKtVNNdn2OoEySOm8i1XA=
+			Gk+VGU3B6EAk2ilKAOPisymyLMr4fTvLL4gf46EKhLM=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XMJjya8AUt+pkyzEeAX8VC0SJI122x6QpLE9s/8X330=
+			4Pv9E/gSiyOB+QCTlw//XxWRQ7+xUoGMDp7AHpQT340=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			o5tHj9ngGuoy3DmY0lczcQuEul4itkwVf+HehX/DYcY=
+			O6+XdleDFIoznAN9HFj6CbLVty6MOYRYwcz8csKH6Cw=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZT9ysT471yFifGD1ehcmu8NjmB7hHmAI/eY37/1n6FU=
+			4Mrb0LIDJP4SMtpOS286qnKmh1uWrqaowweER7o5pck=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			o5tHj9ngGuoy3DmY0lczcQuEul4itkwVf+HehX/DYcY=
+			O6+XdleDFIoznAN9HFj6CbLVty6MOYRYwcz8csKH6Cw=
 			</data>
 		</dict>
 		<key>Modules/WoosmapGeofencing.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q/CTf55gsqvM+WhenK4JWOb6AX0nzC8LtKRU/s2iHhs=
+			Zod57FYwn9y/hEtzTm3hll/i6+6XL5h+Yc5aOiz25MM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -157,21 +157,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zxfecr1DIAXDHZNB+uVY0ggU/PFYV6CXMjVB9J0DqpE=
+			RIeUp5YpTHjRcqBwsHyXbJCRUh/kvLqRqAFW1aT7ujw=
 			</data>
 		</dict>
 		<key>Woosmap.momd/Woosmap.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ip+XFH4ye22238fNrOIi/MAJOFTZEx3C3YqtoA/oplc=
+			QWJoDTJ1VwiZlhI3TJRD5TZdGpRyg+IjKQpbOwz35sg=
 			</data>
 		</dict>
 		<key>Woosmap.momd/dec1924.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uwzdjvPQ6Kss5OL/KaDhJnPJB13GF9jqLWL47ybxw3Y=
+			RsiCt8yPs8BFRnnL7cdW6Oy+InzIdxHUQZahkckK1Q0=
 			</data>
 		</dict>
 		<key>Woosmap.momd/dec1924.omo</key>

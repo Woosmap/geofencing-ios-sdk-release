@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name WoosmapGeofencing
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import Accelerate
 import AdSupport
 import CoreData
@@ -38,7 +38,9 @@ import os
   public var tags: Swift.String?
   public var types: Swift.String?
   public var contact: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init(locationId: Swift.String? = nil, city: Swift.String? = nil, zipCode: Swift.String? = nil, distance: Swift.Double? = nil, latitude: Swift.Double? = nil, longitude: Swift.Double? = nil, dateCaptured: Foundation.Date? = nil, radius: Swift.Double? = nil, address: Swift.String? = nil, tags: Swift.String? = nil, types: Swift.String? = nil, countryCode: Swift.String? = nil, contact: Swift.String? = nil)
+  #endif
   public var user_properties: [Swift.String : Any] {
     get
   }
@@ -48,9 +50,13 @@ import os
   public class func addFromResponseJson(searchAPIResponse: Foundation.Data, locationId: Swift.String) -> [WoosmapGeofencing.POI]
   public class func addTest(poi: WoosmapGeofencing.POI)
   public class func getAll() -> [WoosmapGeofencing.POI]
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func getPOIbyLocationID(locationId: Swift.String) -> WoosmapGeofencing.POI?
+  #endif
   public class func getLastPOIsFromLocationID(locationId: Swift.String) -> [WoosmapGeofencing.POI]
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func getPOIbyIdStore(idstore: Swift.String) -> WoosmapGeofencing.POI?
+  #endif
   public class func deleteAll()
   @objc deinit
 }
@@ -111,7 +117,9 @@ public struct UnsafeMutableMemory<Element> {
 }
 public struct UnsafeMutableMemoryIterator<Element> : Swift.IteratorProtocol {
   public init(_ base: WoosmapGeofencing.UnsafeMutableMemory<Element>)
+  #if compiler(>=5.3) && $NonescapableTypes
   public mutating func next() -> Element?
+  #endif
 }
 @objc @_inheritsConvenienceInitializers public class LocationServiceImpl : WoosmapGeofencing.LocationServiceCoreImpl {
   weak public var airshipEventsDelegate: (any WoosmapGeofencing.AirshipEventsDelegate)?
@@ -121,12 +129,14 @@ public struct UnsafeMutableMemoryIterator<Element> : Swift.IteratorProtocol {
   override public func removeOldPOIRegions(newPOIS: [WoosmapGeofencing.POI])
   override public func checkIfUserIsInRegion(region: CoreLocation.CLCircularRegion)
   override public func addRegionLogTransition(region: CoreLocation.CLRegion, didEnter: Swift.Bool, fromPositionDetection: Swift.Bool)
-  override public func addRegion(identifier: Swift.String, center: CoreLocation.CLLocationCoordinate2D, radius: Swift.Int, type: Swift.String) -> (isCreate: Swift.Bool, identifier: Swift.String)
-  override public func updateLocation(locations: [CoreLocation.CLLocation])
+  override public func addRegion(identifier: Swift.String, center: _LocationEssentials.CLLocationCoordinate2D, radius: Swift.Int, type: Swift.String) -> (isCreate: Swift.Bool, identifier: Swift.String)
+  override public func updateLocation(locations: [_LocationEssentials.CLLocation])
   override public func handleZOIClassifiedEvent(region: WoosmapGeofencing.Region)
   override public func handleVisitEvent(visit: WoosmapGeofencing.Visit)
   override public func handlePOIEvent(poi: WoosmapGeofencing.POI)
+  #if compiler(>=5.3) && $NonescapableTypes
   required public init(locationManger: WoosmapGeofencing.LocationManagerProtocol?)
+  #endif
   @objc deinit
 }
 public protocol MarketingCloudEventsDelegate : AnyObject {
@@ -244,14 +254,18 @@ public class Draft202012Validator {
   @objc dynamic public var latitude: Swift.Double
   @objc dynamic public var longitude: Swift.Double
   @objc dynamic public var visitId: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init(visitId: Swift.String, arrivalDate: Foundation.Date? = nil, departureDate: Foundation.Date? = nil, latitude: Swift.Double, longitude: Swift.Double, dateCaptured: Foundation.Date? = nil, accuracy: Swift.Double)
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Visits {
   public class func add(visit: CoreLocation.CLVisit) -> WoosmapGeofencing.Visit
   public class func addTest(visit: WoosmapGeofencing.Visit)
   public class func getAll() -> [WoosmapGeofencing.Visit]
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func getVisitFromUUID(id: Swift.String) -> WoosmapGeofencing.Visit?
+  #endif
   public class func deleteAll()
   @objc deinit
 }
@@ -268,8 +282,12 @@ public class Draft202012Validator {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class IndoorBeacons {
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func getAll(venue: Swift.String? = nil) -> [WoosmapGeofencing.IndoorBeacon]
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func deleteAll(venue: Swift.String? = nil)
+  #endif
   public class func clearExplicitCache()
   @objc deinit
 }
@@ -288,7 +306,7 @@ public enum EigenDecompositionError : Swift.Error {
 }
 @objc public class LocationServiceCoreImpl : ObjectiveC.NSObject, WoosmapGeofencing.LocationService, CoreLocation.CLLocationManagerDelegate {
   public var locationManager: WoosmapGeofencing.LocationManagerProtocol?
-  public var currentLocation: CoreLocation.CLLocation?
+  public var currentLocation: _LocationEssentials.CLLocation?
   public var lastSearchLocation: WoosmapGeofencing.LastSearhLocation
   public var lastRefreshRegionPOILocationId: Swift.String
   public var lastRegionUpdate: Foundation.Date?
@@ -297,7 +315,9 @@ public enum EigenDecompositionError : Swift.Error {
   weak public var distanceAPIDataDelegate: (any WoosmapGeofencing.DistanceAPIDelegate)?
   weak public var regionDelegate: (any WoosmapGeofencing.RegionsServiceDelegate)?
   weak public var visitDelegate: (any WoosmapGeofencing.VisitServiceDelegate)?
+  #if compiler(>=5.3) && $NonescapableTypes
   required public init(locationManger: WoosmapGeofencing.LocationManagerProtocol?)
+  #endif
   public func initLocationManager()
   public func startUpdatingLocation()
   public func stopUpdatingLocation()
@@ -305,32 +325,36 @@ public enum EigenDecompositionError : Swift.Error {
   public func stopMonitoringSignificantLocationChanges()
   public func stopMonitoringCurrentRegions()
   @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didVisit visit: CoreLocation.CLVisit)
-  @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateLocations locations: [CoreLocation.CLLocation])
+  @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateLocations locations: [_LocationEssentials.CLLocation])
   @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didChangeAuthorization status: CoreLocation.CLAuthorizationStatus)
   @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didFailWithError error: any Swift.Error)
   @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didExitRegion region: CoreLocation.CLRegion)
   @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didEnterRegion region: CoreLocation.CLRegion)
-  open func addRegion(identifier: Swift.String, center: CoreLocation.CLLocationCoordinate2D, radius: CoreLocation.CLLocationDistance) -> (isCreate: Swift.Bool, identifier: Swift.String)
+  open func addRegion(identifier: Swift.String, center: _LocationEssentials.CLLocationCoordinate2D, radius: _LocationEssentials.CLLocationDistance) -> (isCreate: Swift.Bool, identifier: Swift.String)
   public func removeRegion(identifier: Swift.String)
-  open func addRegion(identifier: Swift.String, center: CoreLocation.CLLocationCoordinate2D, radius: Swift.Int, type: Swift.String) -> (isCreate: Swift.Bool, identifier: Swift.String)
-  public func removeRegion(center: CoreLocation.CLLocationCoordinate2D)
+  open func addRegion(identifier: Swift.String, center: _LocationEssentials.CLLocationCoordinate2D, radius: Swift.Int, type: Swift.String) -> (isCreate: Swift.Bool, identifier: Swift.String)
+  public func removeRegion(center: _LocationEssentials.CLLocationCoordinate2D)
   public func removeRegions(type: WoosmapGeofencing.RegionType)
   open func checkIfUserIsInRegion(region: CoreLocation.CLCircularRegion)
   @objc public func locationManagerDidPauseLocationUpdates(_ manager: CoreLocation.CLLocationManager)
   @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didStartMonitoringFor region: CoreLocation.CLRegion)
-  open func updateLocation(locations: [CoreLocation.CLLocation])
+  open func updateLocation(locations: [_LocationEssentials.CLLocation])
   open func searchAPIRequest(location: WoosmapGeofencing.Location)
   public func sendSearchAPIRequest(location: WoosmapGeofencing.Location)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, monitoringDidFailFor region: CoreLocation.CLRegion?, withError error: any Swift.Error)
+  #endif
   open func removeOldPOIRegions(newPOIS: [WoosmapGeofencing.POI])
-  public func calculateDistance(locationOrigin: CoreLocation.CLLocation, coordinatesDest: [(Swift.Double, Swift.Double)], locationId: Swift.String)
-  public func calculateDistance(locationOrigin: CoreLocation.CLLocation, coordinatesDest: [(Swift.Double, Swift.Double)], distanceWithTraffic: Swift.Bool = distanceWithTraffic, distanceMode: WoosmapGeofencing.DistanceMode = distanceMode, distanceUnits: WoosmapGeofencing.DistanceUnits = distanceUnits, distanceLanguage: Swift.String = distanceLanguage)
+  public func calculateDistance(locationOrigin: _LocationEssentials.CLLocation, coordinatesDest: [(Swift.Double, Swift.Double)], locationId: Swift.String)
+  public func calculateDistance(locationOrigin: _LocationEssentials.CLLocation, coordinatesDest: [(Swift.Double, Swift.Double)], distanceWithTraffic: Swift.Bool = distanceWithTraffic, distanceMode: WoosmapGeofencing.DistanceMode = distanceMode, distanceUnits: WoosmapGeofencing.DistanceUnits = distanceUnits, distanceLanguage: Swift.String = distanceLanguage)
   public func tracingLocationDidFailWithError(error: any Swift.Error)
   public func getRegionType(identifier: Swift.String) -> WoosmapGeofencing.RegionType
-  public func checkIfPositionIsInsideGeofencingRegions(location: CoreLocation.CLLocation)
+  public func checkIfPositionIsInsideGeofencingRegions(location: _LocationEssentials.CLLocation)
   open func addRegionLogTransition(region: CoreLocation.CLRegion, didEnter: Swift.Bool, fromPositionDetection: Swift.Bool)
   public func setDataFromPOI(poi: WoosmapGeofencing.POI, propertyDictionary: inout Swift.Dictionary<Swift.String, Any>)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func woosApiCall(with url: Foundation.URL, completionHandler: @escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
+  #endif
   open func handleRefreshSystemGeofence(addCustomGeofence: Swift.Bool = false, locationId: Swift.String)
   open func handleVisitEvent(visit: WoosmapGeofencing.Visit)
   open func handlePOIEvent(poi: WoosmapGeofencing.POI)
@@ -422,7 +446,9 @@ public struct User_properties : Swift.Codable {
 @_hasMissingDesignatedInitializers public class Regions {
   public static func add(POIregion: CoreLocation.CLRegion, didEnter: Swift.Bool, fromPositionDetection: Swift.Bool) -> WoosmapGeofencing.Region
   public static func add(classifiedRegion: WoosmapGeofencing.Region)
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func getRegionFromId(id: Swift.String) -> WoosmapGeofencing.Region?
+  #endif
   public static func getAll() -> [WoosmapGeofencing.Region]
   public static func deleteAll()
   @objc deinit
@@ -440,7 +466,9 @@ public enum Type : Swift.String {
   case number
   case boolean
   case null
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -461,7 +489,9 @@ public enum ConfigurationProfile : Swift.String {
   case passiveTracking
   case visitsTracking
   case beaconTracking
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -479,7 +509,9 @@ public enum RegionType : Swift.String {
   case custom
   case poi
   case none
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -493,13 +525,27 @@ public enum RegionType : Swift.String {
   @objc deinit
 }
 public protocol LocationService : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   var locationManager: WoosmapGeofencing.LocationManagerProtocol? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var locationServiceDelegate: (any WoosmapGeofencing.LocationServiceDelegate)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var searchAPIDataDelegate: (any WoosmapGeofencing.SearchAPIDelegate)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var distanceAPIDataDelegate: (any WoosmapGeofencing.DistanceAPIDelegate)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var regionDelegate: (any WoosmapGeofencing.RegionsServiceDelegate)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var visitDelegate: (any WoosmapGeofencing.VisitServiceDelegate)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   init(locationManger: WoosmapGeofencing.LocationManagerProtocol?)
+  #endif
   func initLocationManager()
   func startUpdatingLocation()
   func stopUpdatingLocation()
@@ -510,24 +556,28 @@ public protocol LocationService : ObjectiveC.NSObject {
   func searchAPIRequest(location: WoosmapGeofencing.Location)
   func sendSearchAPIRequest(location: WoosmapGeofencing.Location)
   func handleRefreshSystemGeofence(addCustomGeofence: Swift.Bool, locationId: Swift.String)
-  func calculateDistance(locationOrigin: CoreLocation.CLLocation, coordinatesDest: [(Swift.Double, Swift.Double)], locationId: Swift.String)
+  func calculateDistance(locationOrigin: _LocationEssentials.CLLocation, coordinatesDest: [(Swift.Double, Swift.Double)], locationId: Swift.String)
   func tracingLocationDidFailWithError(error: any Swift.Error)
-  func addRegion(identifier: Swift.String, center: CoreLocation.CLLocationCoordinate2D, radius: CoreLocation.CLLocationDistance) -> (isCreate: Swift.Bool, identifier: Swift.String)
+  func addRegion(identifier: Swift.String, center: _LocationEssentials.CLLocationCoordinate2D, radius: _LocationEssentials.CLLocationDistance) -> (isCreate: Swift.Bool, identifier: Swift.String)
   func removeRegion(identifier: Swift.String)
-  func addRegion(identifier: Swift.String, center: CoreLocation.CLLocationCoordinate2D, radius: Swift.Int, type: Swift.String) -> (isCreate: Swift.Bool, identifier: Swift.String)
-  func removeRegion(center: CoreLocation.CLLocationCoordinate2D)
+  func addRegion(identifier: Swift.String, center: _LocationEssentials.CLLocationCoordinate2D, radius: Swift.Int, type: Swift.String) -> (isCreate: Swift.Bool, identifier: Swift.String)
+  func removeRegion(center: _LocationEssentials.CLLocationCoordinate2D)
   func removeRegions(type: WoosmapGeofencing.RegionType)
   func checkIfUserIsInRegion(region: CoreLocation.CLCircularRegion)
+  #if compiler(>=5.3) && $NonescapableTypes
   func locationManager(_ manager: CoreLocation.CLLocationManager, monitoringDidFailFor region: CoreLocation.CLRegion?, withError error: any Swift.Error)
+  #endif
   func locationManager(_ manager: CoreLocation.CLLocationManager, didVisit visit: CoreLocation.CLVisit)
-  func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateLocations locations: [CoreLocation.CLLocation])
+  func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateLocations locations: [_LocationEssentials.CLLocation])
   func locationManager(_ manager: CoreLocation.CLLocationManager, didChangeAuthorization status: CoreLocation.CLAuthorizationStatus)
   func locationManager(_ manager: CoreLocation.CLLocationManager, didFailWithError error: any Swift.Error)
   func locationManager(_ manager: CoreLocation.CLLocationManager, didExitRegion region: CoreLocation.CLRegion)
   func locationManager(_ manager: CoreLocation.CLLocationManager, didEnterRegion region: CoreLocation.CLRegion)
   func locationManagerDidPauseLocationUpdates(_ manager: CoreLocation.CLLocationManager)
   func locationManager(_ manager: CoreLocation.CLLocationManager, didStartMonitoringFor region: CoreLocation.CLRegion)
+  #if compiler(>=5.3) && $NonescapableTypes
   func woosApiCall(with url: Foundation.URL, completionHandler: @escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
+  #endif
 }
 extension WoosmapGeofencing.LocationService {
   public func handleRefreshSystemGeofence(locationId: Swift.String)
@@ -538,7 +588,7 @@ extension Swift.ArraySlice {
 public typealias Draft6Validator = WoosmapGeofencing.Draft7Validator
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class WoosmapGeofenceManager : ObjectiveC.NSObject {
   public var locationService: (any WoosmapGeofencing.LocationService)!
-  @objc public static let shared: WoosmapGeofencing.WoosmapGeofenceManager
+  @objc @_Concurrency.MainActor public static let shared: WoosmapGeofencing.WoosmapGeofenceManager
   public var logLevel: WoosmapGeofencing.WosmapLogEvent {
     get
     set
@@ -622,10 +672,12 @@ extension WoosmapGeofencing.WoosmapGeofenceManager {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Locations {
-  public class func add(locations: [CoreLocation.CLLocation]) -> WoosmapGeofencing.Location
+  public class func add(locations: [_LocationEssentials.CLLocation]) -> WoosmapGeofencing.Location
   public class func addTest(location: WoosmapGeofencing.Location)
   public class func getAll() -> [WoosmapGeofencing.Location]
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func getLocationFromId(id: Swift.String) -> WoosmapGeofencing.Location?
+  #endif
   public class func deleteAll()
   @objc deinit
 }
@@ -640,7 +692,9 @@ extension WoosmapGeofencing.WoosmapGeofenceManager {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class IndoorVenues {
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func getVenueFromId(id: Swift.String) -> WoosmapGeofencing.IndoorVenue?
+  #endif
   public class func getAll() -> [WoosmapGeofencing.IndoorVenue]
   @objc deinit
 }
@@ -652,7 +706,7 @@ extension WoosmapGeofencing.WoosmapGeofenceManager {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Distances {
-  public class func addFromResponseJson(APIResponse: Foundation.Data, locationId: Swift.String, origin: CoreLocation.CLLocation, destination: [(Swift.Double, Swift.Double)], distanceMode: WoosmapGeofencing.DistanceMode = distanceMode, distanceUnits: WoosmapGeofencing.DistanceUnits = distanceUnits, distanceLanguage: Swift.String = distanceLanguage, distanceMethod: WoosmapGeofencing.DistanceMethod = distanceMethod) -> [WoosmapGeofencing.Distance]
+  public class func addFromResponseJson(APIResponse: Foundation.Data, locationId: Swift.String, origin: _LocationEssentials.CLLocation, destination: [(Swift.Double, Swift.Double)], distanceMode: WoosmapGeofencing.DistanceMode = distanceMode, distanceUnits: WoosmapGeofencing.DistanceUnits = distanceUnits, distanceLanguage: Swift.String = distanceLanguage, distanceMethod: WoosmapGeofencing.DistanceMethod = distanceMethod) -> [WoosmapGeofencing.Distance]
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class RegionIsochrone {
@@ -676,7 +730,9 @@ extension WoosmapGeofencing.WoosmapGeofenceManager {
 @_hasMissingDesignatedInitializers public class RegionIsochrones {
   public class func add(regionIsochrone: WoosmapGeofencing.RegionIsochrone)
   public class func updateRegion(id: Swift.String, didEnter: Swift.Bool, distanceInfo: WoosmapGeofencing.Distance) -> WoosmapGeofencing.RegionIsochrone
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func getRegionFromId(id: Swift.String) -> WoosmapGeofencing.RegionIsochrone?
+  #endif
   public class func removeRegionIsochrone(id: Swift.String)
   public class func getAll() -> [WoosmapGeofencing.RegionIsochrone]
   public class func deleteAll()
@@ -707,9 +763,11 @@ public enum ValidationResult : Swift.Encodable {
   public var valid: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errors: [WoosmapGeofencing.ValidationError]? {
     get
   }
+  #endif
 }
 @_hasMissingDesignatedInitializers public class ZOI {
   public var accumulator: Swift.Double
@@ -754,7 +812,9 @@ public var searchWoosmapAPI: Swift.String
 public enum DistanceProvider : Swift.String {
   case woosmapTraffic
   case woosmapDistance
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   @available(*, deprecated, message: "This feature was disabled; use the distanceWithTraffic flag")
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -767,7 +827,9 @@ public enum DistanceMode : Swift.String {
   case cycling
   case walking
   case truck
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -779,7 +841,9 @@ public var distanceWoosmapAPI: Swift.String
 public enum TrafficDistanceRouting : Swift.String {
   case fastest
   case balanced
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   @available(*, deprecated, message: "This feature was disabled; use the DistanceMethod")
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -789,7 +853,9 @@ public enum TrafficDistanceRouting : Swift.String {
 public enum DistanceMethod : Swift.String {
   case time
   case distance
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -798,7 +864,9 @@ public enum DistanceMethod : Swift.String {
 public enum DistanceUnits : Swift.String {
   case metric
   case imperial
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -840,7 +908,9 @@ public enum WosmapLogEvent : Swift.Int {
   case info
   case debug
   case trace
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -871,201 +941,271 @@ public class DataCleaner {
   public func cleanOldGeographicData()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class DistanceDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias DistanceDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class DistanceDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias DistanceDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.DistanceDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.DistanceDB>
-  @objc @NSManaged dynamic public var date: Foundation.Date? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var date: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var destinationLatitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var destinationLatitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var destinationLongitude: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var destinationLongitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distance: Swift.Int32 {
+  @objc @NSManaged nonisolated dynamic public var distance: Swift.Int32 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distanceText: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var distanceText: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var duration: Swift.Int32 {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var duration: Swift.Int32 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var durationText: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var durationText: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var locationId: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var locationId: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var mode: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var mode: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var originLatitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var originLatitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var originLongitude: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var originLongitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var routing: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var routing: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var status: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var status: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var units: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var units: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension WoosmapGeofencing.DistanceDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
-@objc @_inheritsConvenienceInitializers public class DurationLogDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias DurationLogDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class DurationLogDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias DurationLogDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.DurationLogDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.DurationLogDB>
-  @objc @NSManaged dynamic public var entryTime: Foundation.Date? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var entryTime: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var exitTime: Foundation.Date? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var exitTime: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var identifier: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var identifier: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension WoosmapGeofencing.DurationLogDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
-@objc @_inheritsConvenienceInitializers public class IndoorBeaconDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias IndoorBeaconDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class IndoorBeaconDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias IndoorBeaconDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.IndoorBeaconDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.IndoorBeaconDB>
-  @objc @NSManaged dynamic public var beaconID: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var beaconID: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var date: Foundation.Date? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var date: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var identifier: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var identifier: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var latitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var latitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var longitude: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var longitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var major: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var major: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var minor: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var minor: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var properties: [Swift.String : Swift.String]? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var properties: [Swift.String : Swift.String]? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var venue_id: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var venue_id: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension WoosmapGeofencing.IndoorBeaconDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
-@objc @_inheritsConvenienceInitializers public class IndoorVenueDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias IndoorVenueDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class IndoorVenueDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias IndoorVenueDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.IndoorVenueDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.IndoorVenueDB>
-  @objc @NSManaged dynamic public var boundingBox: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var boundingBox: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var date: Foundation.Date? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var date: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distance: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var distance: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var identifier: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var identifier: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var latitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var latitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var longitude: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var longitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var name: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension WoosmapGeofencing.IndoorVenueDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
-@objc @_inheritsConvenienceInitializers public class LocationDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias LocationDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class LocationDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias LocationDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.LocationDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.LocationDB>
-  @objc @NSManaged dynamic public var date: Foundation.Date? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var date: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var latitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var latitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var locationDescription: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var locationDescription: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var locationId: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var locationId: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var longitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var longitude: Swift.Double {
     @objc get
     @objc set
   }
@@ -1073,494 +1213,642 @@ extension WoosmapGeofencing.LocationDB {
 extension WoosmapGeofencing.LocationDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
-@objc @_inheritsConvenienceInitializers public class LogIndoorAPIDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias LogIndoorAPIDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class LogIndoorAPIDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias LogIndoorAPIDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.LogIndoorAPIDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.LogIndoorAPIDB>
-  @objc @NSManaged dynamic public var date: Foundation.Date? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var date: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var eventStatus: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var eventStatus: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var log: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var log: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var message: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var message: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension WoosmapGeofencing.LogIndoorAPIDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
-@objc @_inheritsConvenienceInitializers public class LogSearchAPIDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias LogSearchAPIDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class LogSearchAPIDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias LogSearchAPIDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.LogSearchAPIDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.LogSearchAPIDB>
-  @objc @NSManaged dynamic public var date: Foundation.Date? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var date: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distanceLimit: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var distanceLimit: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distanceToFurthestMonitoredPOI: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var distanceToFurthestMonitoredPOI: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distanceTraveled: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var distanceTraveled: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distanceTraveledLastRefreshPOIRegion: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var distanceTraveledLastRefreshPOIRegion: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var lastPOI_distance: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var lastPOI_distance: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var lastSearchLocationLatitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var lastSearchLocationLatitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var lastSearchLocationLongitude: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var lastSearchLocationLongitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var latitude: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var latitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var locationDescription: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var locationDescription: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var longitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var longitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var searchAPILastRequestTimeStampValue: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var searchAPILastRequestTimeStampValue: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var searchAPIRequestEnable: Swift.Bool {
+  @objc @NSManaged nonisolated dynamic public var searchAPIRequestEnable: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var sendSearchAPIRequest: Swift.Bool {
+  @objc @NSManaged nonisolated dynamic public var sendSearchAPIRequest: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var woosmapAPIKey: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var woosmapAPIKey: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension WoosmapGeofencing.LogSearchAPIDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
-@objc @_inheritsConvenienceInitializers public class POIDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias POIDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class POIDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias POIDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.POIDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.POIDB>
-  @objc @NSManaged dynamic public var address: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var address: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var city: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var city: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var contact: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var contact: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var countryCode: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var countryCode: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var date: Foundation.Date? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var date: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distance: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var distance: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var duration: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var duration: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var idstore: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var idstore: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var jsonData: Foundation.NSData? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var jsonData: Foundation.NSData? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var latitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var latitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var locationId: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var locationId: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var longitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var longitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var name: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var name: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var openNow: Swift.Bool {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var openNow: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var radius: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var radius: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var tags: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var tags: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var types: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var types: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var zipCode: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var zipCode: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension WoosmapGeofencing.POIDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
-@objc @_inheritsConvenienceInitializers public class RegionDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias RegionDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class RegionDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias RegionDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.RegionDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.RegionDB>
-  @objc @NSManaged dynamic public var date: Foundation.Date? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var date: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var didEnter: Swift.Bool {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var didEnter: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distance: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var distance: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distanceText: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var distanceText: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var duration: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var duration: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var durationText: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var durationText: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var eventName: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var eventName: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var fromPositionDetection: Swift.Bool {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var fromPositionDetection: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var identifier: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var identifier: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var latitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var latitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var longitude: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var longitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var origin: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var origin: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var radius: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var radius: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var spentTime: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var spentTime: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var type: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension WoosmapGeofencing.RegionDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
-@objc @_inheritsConvenienceInitializers public class RegionIsochroneDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias RegionIsochroneDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class RegionIsochroneDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias RegionIsochroneDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.RegionIsochroneDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.RegionIsochroneDB>
-  @objc @NSManaged dynamic public var date: Foundation.Date? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var date: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var didEnter: Swift.Bool {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var didEnter: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distance: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var distance: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distanceText: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var distanceText: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var duration: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var duration: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var durationText: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var durationText: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var expectedAverageSpeed: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var expectedAverageSpeed: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var fromPositionDetection: Swift.Bool {
+  @objc @NSManaged nonisolated dynamic public var fromPositionDetection: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var identifier: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var identifier: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var idStore: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var idStore: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var latitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var latitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var locationId: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var locationId: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var longitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var longitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var radius: Swift.Int32 {
+  @objc @NSManaged nonisolated dynamic public var radius: Swift.Int32 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var type: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var type: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension WoosmapGeofencing.RegionIsochroneDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
-@objc @_inheritsConvenienceInitializers public class VenueBeaconDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias VenueBeaconDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class VenueBeaconDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias VenueBeaconDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.VenueBeaconDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.VenueBeaconDB>
-  @objc @NSManaged dynamic public var beaconID: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var beaconID: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var date: Foundation.Date? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var date: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var distance: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var distance: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var identifier: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var identifier: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var latitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var latitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var longitude: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var longitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var major: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var major: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var minor: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var minor: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var properties: [Swift.String : Swift.String]? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var properties: [Swift.String : Swift.String]? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var venue_id: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var venue_id: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension WoosmapGeofencing.VenueBeaconDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
-@objc @_inheritsConvenienceInitializers public class VisitDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias VisitDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class VisitDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias VisitDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.VisitDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.VisitDB>
-  @objc @NSManaged dynamic public var accuracy: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var accuracy: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var arrivalDate: Foundation.Date? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var arrivalDate: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var date: Foundation.Date? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var date: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var departureDate: Foundation.Date? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var departureDate: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var latitude: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var latitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var longitude: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var longitude: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var visitId: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var visitId: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension WoosmapGeofencing.VisitDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
-@objc @_inheritsConvenienceInitializers public class ZOIDB : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+public typealias ZOIDBCoreDataClassSet = Foundation.NSSet
+@objc @_inheritsConvenienceInitializers nonisolated public class ZOIDB : CoreData.NSManagedObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override nonisolated dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  #endif
   @objc deinit
 }
+public typealias ZOIDBCoreDataPropertiesSet = Foundation.NSSet
 extension WoosmapGeofencing.ZOIDB {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<WoosmapGeofencing.ZOIDB>
-  @objc @NSManaged dynamic public var accumulator: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var accumulator: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var age: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var age: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var covariance_det: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var covariance_det: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var duration: Swift.Int64 {
+  @objc @NSManaged nonisolated dynamic public var duration: Swift.Int64 {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var endTime: Foundation.Date? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var endTime: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var idVisits: [Swift.String]? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var idVisits: [Swift.String]? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var latMean: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var latMean: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var lngMean: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var lngMean: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var period: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var period: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var prior_probability: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var prior_probability: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var startTime: Foundation.Date? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var startTime: Foundation.Date? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var weekly_density: [Swift.Double]? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var weekly_density: [Swift.Double]? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var wktPolygon: Swift.String? {
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var wktPolygon: Swift.String? {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var x00Covariance_matrix_inverse: Swift.Double {
+  #endif
+  @objc @NSManaged nonisolated dynamic public var x00Covariance_matrix_inverse: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var x01Covariance_matrix_inverse: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var x01Covariance_matrix_inverse: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var x10Covariance_matrix_inverse: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var x10Covariance_matrix_inverse: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var x11Covariance_matrix_inverse: Swift.Double {
+  @objc @NSManaged nonisolated dynamic public var x11Covariance_matrix_inverse: Swift.Double {
     @objc get
     @objc set
   }
-  @objc @NSManaged dynamic public var zoiId: Swift.String? {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @NSManaged nonisolated dynamic public var zoiId: Swift.String? {
     @objc get
     @objc set
   }
+  #endif
 }
 extension WoosmapGeofencing.ZOIDB : Swift.Identifiable {
   public typealias ID = Swift.ObjectIdentifier
 }
+public typealias WoosmapFoundationFrameworkSet = Foundation.NSSet
+public typealias WoosmapCoreDataFrameworkManagedObject = CoreData.NSManagedObject
 extension WoosmapGeofencing.EigenDecompositionError : Swift.Equatable {}
 extension WoosmapGeofencing.EigenDecompositionError : Swift.Hashable {}
 extension WoosmapGeofencing.`Type` : Swift.Equatable {}
