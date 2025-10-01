@@ -1,3 +1,6 @@
+## 4.4.0
+- Updated:  Annoted WoosmapGeofenceManager.shared with @mainactor to ensure thread safety.
+
 ## 4.3.15
 - Updated:  Calculate OpenNow status with OpenNow Specification
 
