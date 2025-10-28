@@ -9,7 +9,7 @@ The SDK simplifies the integration of the location context in your mobile applic
   s.authors = { 'Woosmap' => 'https://developers.woosmap.com/support/contact/'}
   s.documentation_url = 'https://developers.woosmap.com/products/geofencing-sdk/get-started'
 
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '15.0'
 
   s.swift_versions = ['5.1', '5.2']
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
