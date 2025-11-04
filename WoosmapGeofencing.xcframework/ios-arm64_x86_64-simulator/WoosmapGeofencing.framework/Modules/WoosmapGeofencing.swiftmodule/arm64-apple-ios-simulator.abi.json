@@ -23157,6 +23157,7 @@
             "moduleName": "WoosmapGeofencing",
             "declAttributes": [
               "AccessControl",
+              "Custom",
               "RawDocComment"
             ],
             "isFromExtension": true,
@@ -23231,6 +23232,7 @@
             "moduleName": "WoosmapGeofencing",
             "declAttributes": [
               "AccessControl",
+              "Custom",
               "RawDocComment"
             ],
             "isFromExtension": true,

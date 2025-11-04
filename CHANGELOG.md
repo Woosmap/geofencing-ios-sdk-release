@@ -1,3 +1,6 @@
+## 4.5.0
+- Updated:  Change spported target to ios 15
+
 ## 4.4.0
 - Updated:  Annoted WoosmapGeofenceManager.shared with @mainactor to ensure thread safety.
 
