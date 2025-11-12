@@ -1,3 +1,6 @@
+## 4.5.1
+- Updated:  Added MainActor patch spported target to ios 15
+
 ## 4.5.0
 - Updated:  Change spported target to ios 15
 
