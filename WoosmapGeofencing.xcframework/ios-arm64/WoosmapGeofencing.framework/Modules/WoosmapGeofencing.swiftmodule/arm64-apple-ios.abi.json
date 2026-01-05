@@ -23229,9 +23229,133 @@
             "usr": "s:17WoosmapGeofencing0A15GeofenceManagerC19startCustomTracking3urlSb6status_SaySSG6errorstSS_tF",
             "mangledName": "$s17WoosmapGeofencing0A15GeofenceManagerC19startCustomTracking3urlSb6status_SaySSG6errorstSS_tF",
             "moduleName": "WoosmapGeofencing",
+            "deprecated": true,
             "declAttributes": [
               "AccessControl",
+              "Available",
               "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startCustomTracking",
+            "printedName": "startCustomTracking(url:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(status: Swift.Bool, errors: [Swift.String])",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@WoosmapGeofencing@objc(cs)WoosmapGeofenceManager(im)startCustomTrackingWithUrl:completionHandler:",
+            "mangledName": "$s17WoosmapGeofencing0A15GeofenceManagerC19startCustomTracking3urlSb6status_SaySSG6errorstSS_tYaF",
+            "moduleName": "WoosmapGeofencing",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "Custom",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startCustomTracking",
+            "printedName": "startCustomTracking(url:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, [Swift.String]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, [Swift.String])",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@WoosmapGeofencing@objc(cs)WoosmapGeofenceManager(im)startCustomTrackingWithUrl:completion:",
+            "mangledName": "$s17WoosmapGeofencing0A15GeofenceManagerC19startCustomTracking3url10completionySS_ySb_SaySSGtctF",
+            "moduleName": "WoosmapGeofencing",
+            "declAttributes": [
+              "Dynamic",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"

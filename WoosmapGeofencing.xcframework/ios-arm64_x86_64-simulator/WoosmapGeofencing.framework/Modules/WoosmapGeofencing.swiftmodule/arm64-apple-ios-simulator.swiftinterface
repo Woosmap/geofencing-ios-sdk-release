@@ -604,7 +604,10 @@ public typealias Draft6Validator = WoosmapGeofencing.Draft7Validator
 extension WoosmapGeofencing.WoosmapGeofenceManager {
   public func startTracking(configurationProfile: WoosmapGeofencing.ConfigurationProfile)
   @objc dynamic public func stopTracking()
+  @available(*, deprecated, message: "Use the async version of startCustomTracking(url:) instead.")
   public func startCustomTracking(url: Swift.String) -> (status: Swift.Bool, errors: [Swift.String])
+  @objc @_Concurrency.MainActor dynamic public func startCustomTracking(url: Swift.String) async -> (status: Swift.Bool, errors: [Swift.String])
+  @objc dynamic public func startCustomTracking(url: Swift.String, completion: @escaping (Swift.Bool, [Swift.String]) -> Swift.Void)
   @objc dynamic public func setIndoorSearchAPIEnable(enable: Swift.Bool)
   @objc dynamic public func getIndoorSearchAPIEnable() -> Swift.Bool
   @objc @available(*, deprecated, message: "Call refreshPOIs")

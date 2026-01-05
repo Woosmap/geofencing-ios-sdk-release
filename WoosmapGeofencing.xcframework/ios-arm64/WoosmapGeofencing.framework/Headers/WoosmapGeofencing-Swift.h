@@ -975,6 +975,32 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) WoosmapGeofe
 ///
 /// \endcode
 - (void)stopTracking;
+/// Customize tracking behaviour
+/// Users can customise tracking profiles concerning their usage.
+/// Usage Example:
+/// \code
+/// (status,error) = await WoosmapGeofenceManager.shared.startCustomTracking("https://woosmap.com/tracking.json")
+///
+/// \endcode\param url External web URL to fetch trackiing json format
+///
+///
+/// returns:
+/// status as sucessfull or not and  error  info collection, if any
+- (void)startCustomTrackingWithUrl:(NSString * _Nonnull)url completionHandler:(void (^ _Nonnull)(BOOL, NSArray<NSString *> * _Nonnull))completionHandler;
+/// Customize tracking behaviour
+/// Users can customise tracking profiles concerning their usage.
+/// Usage Example:
+/// \code
+///  WoosmapGeofenceManager.shared.startCustomTracking("https://woosmap.com/tracking.json") { status, error in
+///      print(status)
+///  }
+///
+/// \endcode\param url External web URL to fetch trackiing json format
+///
+///
+/// returns:
+/// status as sucessfull or not and  error  info collection, if any
+- (void)startCustomTrackingWithUrl:(NSString * _Nonnull)url completion:(void (^ _Nonnull)(BOOL, NSArray<NSString *> * _Nonnull))completion;
 /// Update Indoor Search  API Status
 /// \param enable Bool
 ///
