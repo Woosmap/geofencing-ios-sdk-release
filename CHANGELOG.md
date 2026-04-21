@@ -1,3 +1,6 @@
+## 4.5.4-alpha1
+- Updated:  Use async implementation for startCustomTracking
+
 ## 4.5.3
 - Updated:  Use async implementation for startCustomTracking
 
