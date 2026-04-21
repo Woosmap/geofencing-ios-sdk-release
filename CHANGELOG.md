@@ -1,3 +1,5 @@
+## 4.5.4
+- Updated:  fine-tune entry/exit poi event
 ## 4.5.4-alpha1
 - Updated:  Use async implementation for startCustomTracking
 

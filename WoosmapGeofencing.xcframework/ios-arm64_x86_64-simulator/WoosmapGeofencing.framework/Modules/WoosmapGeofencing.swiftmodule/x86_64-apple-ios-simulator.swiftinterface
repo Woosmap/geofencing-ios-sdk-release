@@ -126,6 +126,7 @@ public struct UnsafeMutableMemoryIterator<Element> : Swift.IteratorProtocol {
   override public func handleZOIClassifiedEvent(region: WoosmapGeofencing.Region)
   override public func handleVisitEvent(visit: WoosmapGeofencing.Visit)
   override public func handlePOIEvent(poi: WoosmapGeofencing.POI)
+  override public func checkIfPositionIsInsideGeofencingRegions(location: CoreLocation.CLLocation)
   required public init(locationManger: WoosmapGeofencing.LocationManagerProtocol?)
   @objc deinit
 }
