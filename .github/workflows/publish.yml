@@ -25,11 +25,11 @@ jobs:
 
       - name: Download artifact zip
         run: |
-          curl -L -H "Authorization: token ${{ steps.app-token.outputs.token }}" \
+          curl -L -H "Authorization: token ${{ secrets.WOOSMAP_GITHUB_TOKEN }}" \
             -o $RUNNER_TEMP/artifact.zip \
             https://api.github.com/repos/Woosmap/geofencing-enterprise-ios-sdk/actions/artifacts/${{ github.event.client_payload.artifact_id }}/zip
 
-          curl -L -H "Authorization: token ${{ steps.app-token.outputs.token }}" \
+          curl -L -H "Authorization: token ${{ secrets.WOOSMAP_GITHUB_TOKEN }}" \
               -o $RUNNER_TEMP/sdk.zip \
               https://api.github.com/repos/Woosmap/geofencing-enterprise-ios-sdk/actions/artifacts/${{ github.event.client_payload.sdk_artifact_id }}/zip
 
