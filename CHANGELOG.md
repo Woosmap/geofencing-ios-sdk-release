@@ -1,3 +1,6 @@
+## 4.5.6
+- Updated:  remove hysteresisBuffer from entry event
+
 ## 4.5.5
 - Updated:  recheck region radius on iOS exit region event to suppress false exits
 
