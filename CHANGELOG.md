@@ -1,3 +1,6 @@
+## 4.5.5
+- Updated:  recheck region radius on iOS exit region event to suppress false exits
+
 ## 4.5.4
 - Updated:  fine-tune entry/exit poi event
 ## 4.5.4-alpha1
