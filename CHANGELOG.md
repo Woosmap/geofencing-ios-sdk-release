@@ -1,3 +1,6 @@
+## 4.6.0
+- Updated:  improved main-thread handling for better reliability and performance (#153)
+
 ## 4.5.6
 - Updated:  remove hysteresisBuffer from entry event
 

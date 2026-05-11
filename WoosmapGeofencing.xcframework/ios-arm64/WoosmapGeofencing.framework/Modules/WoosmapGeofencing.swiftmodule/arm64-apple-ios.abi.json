@@ -54172,154 +54172,154 @@
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 34360,
+      "offset": 35070,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 40689,
+      "offset": 41399,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 52628,
+      "offset": 53338,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 52699,
+      "offset": 53409,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 72267,
+      "offset": 72912,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 79778,
+      "offset": 80428,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 79811,
+      "offset": 80461,
       "length": 5,
       "value": "\"poi\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 79851,
+      "offset": 80501,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 80165,
+      "offset": 80815,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "Array",
-      "offset": 80213,
+      "offset": 80863,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 81063,
+      "offset": 81713,
       "length": 5,
       "value": "\"poi\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 81439,
+      "offset": 82089,
       "length": 8,
       "value": "\"beacon\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 81811,
+      "offset": 82461,
       "length": 5,
       "value": "\"poi\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 82367,
+      "offset": 83017,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 82705,
+      "offset": 83355,
       "length": 28,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 82732,
+      "offset": 83382,
       "length": 10,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 82741,
+      "offset": 83391,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 82770,
+      "offset": 83420,
       "length": 6,
       "value": "\"<id>\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "StringLiteral",
-      "offset": 82784,
+      "offset": 83434,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 83588,
+      "offset": 84238,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 83684,
+      "offset": 84334,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/WoosmapGeofencing\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceImpl.swift",
       "kind": "IntegerLiteral",
-      "offset": 83746,
+      "offset": 84396,
       "length": 1,
       "value": "1"
     },
@@ -56671,14 +56671,14 @@
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/core\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceCoreImpl.swift",
       "kind": "StringLiteral",
-      "offset": 34571,
+      "offset": 34553,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/core\/Sources\/WoosmapGeofencing\/Business Logic\/LocationServiceCoreImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 49716,
+      "offset": 49627,
       "length": 5,
       "value": "false"
     },
