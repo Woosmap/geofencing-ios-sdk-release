@@ -56846,14 +56846,14 @@
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/core\/Sources\/WoosmapGeofencing\/Business Logic\/OpeningHoursChecker.swift",
       "kind": "StringLiteral",
-      "offset": 465,
+      "offset": 841,
       "length": 19,
       "value": "\"temporary_closure\""
     },
     {
       "filePath": "\/Users\/runner\/work\/geofencing-enterprise-ios-sdk\/geofencing-enterprise-ios-sdk\/core\/Sources\/WoosmapGeofencing\/Business Logic\/OpeningHoursChecker.swift",
       "kind": "StringLiteral",
-      "offset": 1378,
+      "offset": 2331,
       "length": 9,
       "value": "\"all-day\""
     },
