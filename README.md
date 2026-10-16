@@ -6,6 +6,10 @@ The Woosmap Geofencing SDK is a mobile cross-platform software development kit f
 
 The SDK simplifies the integration of the location context in your mobile application by taking care of lower-level functionalities such as data collection or battery management.
 
+### Requirements
+
+The published binary is built with Apple Swift 6.1.2 (effective Swift 5.10) and targets iOS 15.0 and above. Integration requires Xcode 15.3 or later.
+
 ### Documentation
 
 All feature descriptions and guides to implement the Woosmap Geofencing iOS SDK are available on the [Woosmap developers documentation](https://developers.woosmap.com/products/geofencing-sdk/get-started/).
