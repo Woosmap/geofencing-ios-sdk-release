@@ -11,7 +11,7 @@ The SDK simplifies the integration of the location context in your mobile applic
 
   s.ios.deployment_target = '15.0'
 
-  s.swift_versions = ['5.1', '5.2']
+  s.swift_versions = ['5.10']
   # s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   # s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.source       = { :git => "https://github.com/Woosmap/geofencing-ios-sdk-release.git",  :tag => s.version.to_s }
