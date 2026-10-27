@@ -1,3 +1,6 @@
+## 4.7.0
+- Updated: geofence monitoring now uses CLMonitor on iOS 17.2 and later; circular regions stay visible through `locationManager.monitoredRegions` there, with identifiers namespaced by CoreLocation as `<bundle identifier>::<identifier>` (#167, #168, #169)
+
 ## 4.6.1
 - Fixed: opening hours slots that run past midnight (e.g. 22:00 → 02:00) now correctly keep a store open into the next day (#163)
 
