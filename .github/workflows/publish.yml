@@ -1,4 +1,4 @@
-name: publish Geofencing SDK on https://cocoapods.org/
+name: publish Geofencing SDK release
 on:
   repository_dispatch:
     types: [pods]
@@ -119,29 +119,3 @@ jobs:
       - name: Lint podspec
         run: |
           pod lib lint WoosmapGeofencing.podspec --allow-warnings
-      
-
-      - name: Push to CocoaPods trunk
-        env:
-          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-        run: |
-          mkdir -p ~/.cocoapods
-          mkdir -p ~/.cocoapods/trunk
-          cat <<EOF > ~/.cocoapods/trunk/config.json
-          {
-            "trunk_token": "${COCOAPODS_TRUNK_TOKEN}"
-          }
-          EOF
-          pod trunk me
-          pod trunk push WoosmapGeofencing.podspec --allow-warnings
-      
-
-      - name: cleanup
-        if: ${{ always() }}
-        run: |
-            rm -rf ~/.cocoapods
-      
-
-
-
-      
